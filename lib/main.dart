@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'frontend/homepage.dart';
+import 'package:wawastudio/frontend/profile_page.dart';
+
+import 'frontend/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +13,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      home: const HomePage(),
+      routes: {
+        '/home': (context) => const HomePage(),
+        '/profile': (context) => const ProfilePage(),
+      },
     );
   }
 }
