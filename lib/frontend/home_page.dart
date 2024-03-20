@@ -84,7 +84,9 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontSize: 16),
                   )),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/contact');
+                  },
                   child: const Text(
                     'Contacts',
                     style: TextStyle(fontSize: 16),

@@ -97,7 +97,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 const SizedBox(height: 20),
                 Container(
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery.of(context).size.width * 0.9,
                   decoration: const BoxDecoration(color: Colors.red),
                   child: const Column(children: <Widget>[
                     Column(

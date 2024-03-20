@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wawastudio/frontend/contact_page.dart';
 import 'package:wawastudio/frontend/profile_page.dart';
 
 import 'frontend/home_page.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => const HomePage(),
         '/profile': (context) => const ProfilePage(),
+        '/contact': (context) => const ContactPage(),
       },
     );
   }
