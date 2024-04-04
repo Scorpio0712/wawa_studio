@@ -155,21 +155,22 @@ class _ContactPageState extends State<ContactPage> {
                 ],
               ),
             ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: Container(
-        height: MediaQuery.of(context).size.height * 0.1,
-        width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(color: AppColor.luxuryYellow),
-        child: const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              '(c) Copyright Wawa Studio Co.,LTD 2024',
-              style: TextStyle(
-                color: AppColor.luxuryGrey,
-                fontSize: 14,
+            const SizedBox(height: 20),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.1,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(color: AppColor.luxuryYellow),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    '(c) Copyright Wawa Studio Co.,LTD 2024',
+                    style: TextStyle(
+                      color: AppColor.luxuryGrey,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
