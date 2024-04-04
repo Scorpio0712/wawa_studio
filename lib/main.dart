@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wawastudio/frontend/contact_page.dart';
+import 'package:wawastudio/frontend/course_page.dart';
+import 'package:wawastudio/frontend/gallery_page.dart';
 import 'package:wawastudio/frontend/profile_page.dart';
 
 import 'frontend/home_page.dart';
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const HomePage(),
         '/profile': (context) => const ProfilePage(),
         '/contact': (context) => const ContactPage(),
+        '/course': (context) => const CoursePage(),
+        '/gallery': (context) => const GalleryPage(),
       },
     );
   }

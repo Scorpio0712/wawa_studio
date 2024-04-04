@@ -12,9 +12,10 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColor.luxuryBlack,
-        body: SingleChildScrollView(
-          child: Column(children: [
+      backgroundColor: AppColor.luxuryBlack,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
             Container(
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
@@ -58,19 +59,25 @@ class _ProfilePageState extends State<ProfilePage> {
                         style: TextStyle(fontSize: 16),
                       )),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/course');
+                      },
                       child: const Text(
                         'Courses',
                         style: TextStyle(fontSize: 16),
                       )),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/gallery');
+                      },
                       child: const Text(
                         'Gallery',
                         style: TextStyle(fontSize: 16),
                       )),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/contact');
+                      },
                       child: const Text(
                         'Contacts',
                         style: TextStyle(fontSize: 16),
@@ -98,7 +105,6 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(height: 20),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.9,
-                  decoration: const BoxDecoration(color: Colors.red),
                   child: const Column(children: <Widget>[
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -154,8 +160,44 @@ class _ProfilePageState extends State<ProfilePage> {
                   ]),
                 )
               ],
-            )
-          ]),
-        ));
+            ),
+            // const Spacer(),
+            // Container(
+            //     height: MediaQuery.of(context).size.height * 0.1,
+            //     width: MediaQuery.of(context).size.width,
+            //     decoration: const BoxDecoration(color: AppColor.luxuryYellow),
+            //     child: const Row(
+            //       mainAxisAlignment: MainAxisAlignment.center,
+            //       children: <Widget>[
+            //         Text(
+            //           '(c) Copyright Wawa Studio Co.,LTD 2024',
+            //           style: TextStyle(
+            //             color: AppColor.luxuryGrey,
+            //             fontSize: 14,
+            //           ),
+            //         ),
+            //       ],
+            //     ),),
+          ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: MediaQuery.of(context).size.height * 0.1,
+        width: MediaQuery.of(context).size.width,
+        decoration: const BoxDecoration(color: AppColor.luxuryYellow),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              '(c) Copyright Wawa Studio Co.,LTD 2024',
+              style: TextStyle(
+                color: AppColor.luxuryGrey,
+                fontSize: 14,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
