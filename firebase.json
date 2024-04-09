@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "wawastudio-76774",
     "public": "public",
     "ignore": [
       "firebase.json",
