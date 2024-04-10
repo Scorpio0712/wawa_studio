@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.jpg'),
+                    image: AssetImage('assets/image/pic_18.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -207,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.jpg'),
+                                  image: AssetImage('assets/image/pic_18.JPG'),
                                 ),
                               ))
                         ],
@@ -226,7 +226,7 @@ class _HomePageState extends State<HomePage> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.jpg'),
+                                  image: AssetImage('assets/image/pic_18.JPG'),
                                 ),
                               ))
                         ],
@@ -269,7 +269,7 @@ class _HomePageState extends State<HomePage> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.jpg'),
+                                  image: AssetImage('assets/image/pic_18.JPG'),
                                 ),
                               ))
                         ],
