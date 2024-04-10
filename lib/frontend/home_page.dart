@@ -12,10 +12,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final List<String> imgList = [
     'assets/image/pic_1.jpg',
-    'assets/image/pic_10.jpg',
-    'assets/image/pic_17.jpg',
-    'assets/image/pic_5.jpg',
-    'assets/image/pic_14.jpg'
+    'assets/image/pic_10.JPG',
+    'assets/image/pic_17.JPG',
+    'assets/image/pic_5.JPG',
+    'assets/image/pic_14.JPG'
   ];
 
   List<Widget> generateImagesTiles() {
