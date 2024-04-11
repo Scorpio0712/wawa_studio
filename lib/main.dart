@@ -35,4 +35,5 @@ class AppColor {
   static const Color luxuryBlue = Color(0xff525266);
   static const Color luxuryRed = Color(0xffff6666);
   static const Color luxuryGrey = Color(0xffcbbeb5);
+  static const Color luxuryOR = Color.fromARGB(255, 255, 106, 0);
 }
