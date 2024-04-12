@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: HomePage(),
       routes: {
-        '/home': (context) => const HomePage(),
+        '/home': (context) => HomePage(),
         '/profile': (context) => const ProfilePage(),
         '/contact': (context) => const ContactPage(),
         '/course': (context) => const CoursePage(),
@@ -36,5 +36,4 @@ class AppColor {
   static const Color luxuryBlue = Color(0xff525266);
   static const Color luxuryRed = Color(0xffff6666);
   static const Color luxuryGrey = Color(0xffcbbeb5);
-  static const Color luxuryGG = Color.fromARGB(255, 0, 255, 128);
 }
