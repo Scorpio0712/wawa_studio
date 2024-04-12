@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               decoration: BoxDecoration(
                 border: Border.all(
-                  width: 0,
+                  
                   color: AppColor.luxuryYellow,
                 ),
                 color: AppColor.luxuryYellow,
@@ -111,6 +111,7 @@ class _HomePageState extends State<HomePage> {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/image/pic_18.JPG'),
+                    
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -120,6 +121,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
+                    
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -170,7 +172,7 @@ class _HomePageState extends State<HomePage> {
                         options: CarouselOptions(
                           enlargeCenterPage: true,
                           autoPlay: true,
-                          aspectRatio: 18 / 8,
+                          aspectRatio: 18/8,
                         ),
                       ),
                     ],
