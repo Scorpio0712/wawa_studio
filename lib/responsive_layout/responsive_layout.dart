@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:wawastudio/responsive_layout/dimension.dart';
 
+//ใช้วิธีตามคลิปในแชท
+
 class ResponsiveLaout extends StatelessWidget {
   final Widget mobileBody;
   final Widget destopBody;

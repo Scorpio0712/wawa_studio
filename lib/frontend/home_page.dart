@@ -648,83 +648,56 @@ class MobileHomepage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 border: Border.all(
-                  width: 0,
-                  color: AppColor.luxuryYellow,
-                ),
-                color: AppColor.luxuryYellow,
-              ),
-              child: const Text(
-                'Wawa Studio',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(
+                  width: 10,
                   color: AppColor.luxuryYellow,
                 ),
                 color: AppColor.luxuryYellow,
               ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home');
-                      },
-                      child: const Text(
-                        'Home',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColor.luxuryBlue,
-                        ),
-                      )),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/profile');
-                      },
-                      child: const Text(
-                        'Profile',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColor.luxuryBlue,
-                        ),
-                      )),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/course');
-                      },
-                      child: const Text(
-                        'Courses',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColor.luxuryBlue,
-                        ),
-                      )),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/gallery');
-                      },
-                      child: const Text(
-                        'Gallery',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColor.luxuryBlue,
-                        ),
-                      )),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/contact');
-                    },
-                    child: const Text(
-                      'Contacts',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: AppColor.luxuryBlue,
-                      ),
-                    ),
+                  const Text(
+                    'Wawa Studio',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
+                  PopupMenuButton(
+                      icon: const Icon(Icons.menu),
+                      color: AppColor.luxuryYellow,
+                      onSelected: (value) {
+                        if (value == 'Home') {
+                          Navigator.pushNamed(context, '/home');
+                        } else if (value == 'Profile') {
+                          Navigator.pushNamed(context, '/profile');
+                        } else if (value == 'Courses') {
+                          Navigator.pushNamed(context, '/course');
+                        } else if (value == 'Gallery') {
+                          Navigator.pushNamed(context, '/gallery');
+                        } else if (value == 'Contact') {
+                          Navigator.pushNamed(context, '/contact');
+                        }
+                      },
+                      itemBuilder: (context) => [
+                            const PopupMenuItem(
+                              value: 'Home',
+                              child: Text('Home'),
+                            ),
+                            const PopupMenuItem(
+                              value: 'Profile',
+                              child: Text('Profile'),
+                            ),
+                            const PopupMenuItem(
+                              value: 'Courses',
+                              child: Text('Courses'),
+                            ),
+                            const PopupMenuItem(
+                              value: 'Gallery',
+                              child: Text('Gallery'),
+                            ),
+                            const PopupMenuItem(
+                              value: 'Contact',
+                              child: Text('Contact'),
+                            )
+                          ])
                 ],
               ),
             ),
@@ -779,7 +752,7 @@ class MobileHomepage extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            width: 10,
+                            width: 8,
                           ),
                           ElevatedButton.icon(
                             onPressed: () {},

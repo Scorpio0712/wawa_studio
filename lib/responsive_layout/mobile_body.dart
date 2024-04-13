@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//ใช้วิธีตามคลิปในแชท
 class MymobileBody extends StatelessWidget {
   const MymobileBody({super.key});
 
