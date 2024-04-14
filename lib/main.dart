@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
       routes: {
-        '/home': (context) => HomePage(),
+        '/home': (context) => const HomePage(),
         '/profile': (context) => const ProfilePage(),
         '/contact': (context) => const ContactPage(),
         '/course': (context) => const CoursePage(),
@@ -36,4 +36,20 @@ class AppColor {
   static const Color luxuryBlue = Color(0xff525266);
   static const Color luxuryRed = Color(0xffff6666);
   static const Color luxuryGrey = Color(0xffcbbeb5);
+}
+
+class LoadingPage extends StatelessWidget {
+  const LoadingPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      backgroundColor: AppColor.luxuryYellow,
+      body: Center(
+        child: CircularProgressIndicator(
+          color: AppColor.luxuryBlue,
+        ),
+      ),
+    );
+  }
 }
