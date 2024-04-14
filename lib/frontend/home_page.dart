@@ -4,7 +4,7 @@ import 'package:wawastudio/main.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -702,14 +702,14 @@ class MobileHomepage extends StatelessWidget {
               ),
             ),
             Container(
+              padding: const EdgeInsets.all(50),
+              height: MediaQuery.of(context).size.height * 0.7,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/image/pic_18.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
-              padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height * 0.7,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -775,7 +775,7 @@ class MobileHomepage extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 30),
                   Stack(
                     children: [
                       CarouselSlider(
