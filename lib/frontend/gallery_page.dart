@@ -40,10 +40,9 @@ class DesktopGalleryPage extends StatelessWidget {
                 color: AppColor.luxuryYellow,
               ),
               child: const Image(
-                image: AssetImage('assets/image/wawalogo.png'), 
+                image: AssetImage('assets/image/wawalogo.png'),
                 width: 100,
                 height: 100,
-                
               ),
             ),
             Container(
@@ -100,6 +99,28 @@ class DesktopGalleryPage extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 20),
+            Container(
+              decoration: const BoxDecoration(),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        //รอใส่ grid 3X3 
+                      )
+                    ],
+                  )
+                  // Image(
+                  //   image: AssetImage('assets/image/pic_12.JPG'),
+                  //   width: 700,
+                  // ),
+                ],
+              ),
+            ),
+            
             const SizedBox(height: 20),
             Container(
               height: MediaQuery.of(context).size.height * 0.1,
