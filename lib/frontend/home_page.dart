@@ -31,7 +31,7 @@ class DesktopHomePage extends StatelessWidget {
     'assets/image/pic_10.JPG',
     'assets/image/pic_17.JPG',
     'assets/image/pic_5.JPG',
-    'assets/image/pic_14.JPG'
+    'assets/image/pic_14.JPG',
   ];
 
   List<Widget> generateImagesTiles() {
@@ -62,11 +62,14 @@ class DesktopHomePage extends StatelessWidget {
                 ),
                 color: AppColor.luxuryYellow,
               ),
-              child: const Text(
-                'Wawa Studio',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              child: const Image(
+                image: AssetImage('assets/image/wawalogo.png'),
               ),
+              // child: const Text(
+              //   'Wawa Studio',
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              // ),
             ),
             Container(
               decoration: BoxDecoration(
