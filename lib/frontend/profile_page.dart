@@ -1,20 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:wawastudio/main.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth > 1200) {
-        return DesktopProfilePage();
-      } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
-        return TabletProfilePage();
-      } else {
-        return MobileProfilePage();
-      }
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  bool loading = false;
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() {
+    setState(() {
+      loading = true;
     });
+    if (mounted) {
+      setState(() {
+        loading = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return loading
+        ? const Center(
+            child: CircularProgressIndicator(),
+          )
+        : LayoutBuilder(builder: (context, constraints) {
+            if (constraints.maxWidth > 1200) {
+              return const DesktopProfilePage();
+            } else if (constraints.maxWidth > 800 &&
+                constraints.maxWidth < 1200) {
+              return const TabletProfilePage();
+            } else {
+              return const MobileProfilePage();
+            }
+          });
   }
 }
 
@@ -38,9 +66,9 @@ class DesktopProfilePage extends StatelessWidget {
                 color: AppColor.luxuryYellow,
               ),
               child: const Image(
-                image: AssetImage('assets/image/wawalogo.png'), 
-                width: 100,
-                height: 100,
+                image: AssetImage('assets/image/wawalogo.png'),
+                width: 50,
+                height: 50,
               ),
             ),
             Container(
@@ -400,47 +428,45 @@ class MobileProfilePage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'Wawa Studio',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  const Image(
+                    image: AssetImage('assets/image/wawalogo.png'),
+                    width: 100,
+                    height: 50,
                   ),
                   PopupMenuButton(
                       icon: const Icon(Icons.menu),
                       color: AppColor.luxuryYellow,
-                      onSelected: (value) {
-                        if (value == 'Home') {
-                          Navigator.pushNamed(context, '/home');
-                        } else if (value == 'Profile') {
-                          Navigator.pushNamed(context, '/profile');
-                        } else if (value == 'Courses') {
-                          Navigator.pushNamed(context, '/course');
-                        } else if (value == 'Gallery') {
-                          Navigator.pushNamed(context, '/gallery');
-                        } else if (value == 'Contact') {
-                          Navigator.pushNamed(context, '/contact');
-                        }
-                      },
                       itemBuilder: (context) => [
-                            const PopupMenuItem(
-                              value: 'Home',
-                              child: Text('Home'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/home');
+                              },
+                              child: const Text('Home'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Profile',
-                              child: Text('Profile'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/profile');
+                              },
+                              child: const Text('Profile'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Courses',
-                              child: Text('Courses'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/course');
+                              },
+                              child: const Text('Courses'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Gallery',
-                              child: Text('Gallery'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/gallery');
+                              },
+                              child: const Text('Gallery'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Contact',
-                              child: Text('Contact'),
-                            )
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/contact');
+                              },
+                              child: const Text('Contact'),
+                            ),
                           ])
                 ],
               ),

@@ -1,22 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:wawastudio/main.dart';
 
-class GalleryPage extends StatelessWidget {
+class GalleryPage extends StatefulWidget {
   const GalleryPage({super.key});
 
   @override
+  State<GalleryPage> createState() => _GalleryPageState();
+}
+
+class _GalleryPageState extends State<GalleryPage> {
+  bool loading = false;
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() {
+    setState(() {
+      loading = true;
+    });
+    if (mounted) {
+      setState(() {
+        loading = false;
+      });
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxWidth > 1200) {
-          return DesktopGalleryPage();
-        } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
-          return TabletGalleryPage();
-        } else {
-          return MobileGalleryPage();
-        }
-      },
-    );
+    return loading
+        ? const Center(
+            child: CircularProgressIndicator(),
+          )
+        : LayoutBuilder(
+            builder: (context, constraints) {
+              if (constraints.maxWidth > 1200) {
+                return const DesktopGalleryPage();
+              } else if (constraints.maxWidth > 800 &&
+                  constraints.maxWidth < 1200) {
+                return const TabletGalleryPage();
+              } else {
+                return const MobileGalleryPage();
+              }
+            },
+          );
   }
 }
 
@@ -41,8 +69,8 @@ class DesktopGalleryPage extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 100,
-                height: 100,
+                width: 50,
+                height: 50,
               ),
             ),
             Container(
@@ -109,8 +137,8 @@ class DesktopGalleryPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Column(
-                        //รอใส่ grid 3X3 
-                      )
+                          //รอใส่ grid 3X3
+                          )
                     ],
                   )
                   // Image(
@@ -120,7 +148,6 @@ class DesktopGalleryPage extends StatelessWidget {
                 ],
               ),
             ),
-            
             const SizedBox(height: 20),
             Container(
               height: MediaQuery.of(context).size.height * 0.1,
@@ -272,47 +299,45 @@ class MobileGalleryPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'Wawa Studio',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  const Image(
+                    image: AssetImage('assets/image/wawalogo.png'),
+                    width: 100,
+                    height: 50,
                   ),
                   PopupMenuButton(
                       icon: const Icon(Icons.menu),
                       color: AppColor.luxuryYellow,
-                      onSelected: (value) {
-                        if (value == 'Home') {
-                          Navigator.pushNamed(context, '/home');
-                        } else if (value == 'Profile') {
-                          Navigator.pushNamed(context, '/profile');
-                        } else if (value == 'Courses') {
-                          Navigator.pushNamed(context, '/course');
-                        } else if (value == 'Gallery') {
-                          Navigator.pushNamed(context, '/gallery');
-                        } else if (value == 'Contact') {
-                          Navigator.pushNamed(context, '/contact');
-                        }
-                      },
                       itemBuilder: (context) => [
-                            const PopupMenuItem(
-                              value: 'Home',
-                              child: Text('Home'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/home');
+                              },
+                              child: const Text('Home'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Profile',
-                              child: Text('Profile'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/profile');
+                              },
+                              child: const Text('Profile'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Courses',
-                              child: Text('Courses'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/course');
+                              },
+                              child: const Text('Courses'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Gallery',
-                              child: Text('Gallery'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/gallery');
+                              },
+                              child: const Text('Gallery'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Contact',
-                              child: Text('Contact'),
-                            )
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/contact');
+                              },
+                              child: const Text('Contact'),
+                            ),
                           ])
                 ],
               ),
