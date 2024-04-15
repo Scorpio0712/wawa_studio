@@ -63,9 +63,10 @@ class DesktopHomePage extends StatelessWidget {
                 color: AppColor.luxuryYellow,
               ),
               child: const Image(
-                image: AssetImage('assets/image/wawalogo.png'), width: 100,
+                image: AssetImage('assets/image/wawalogo.png'), 
+                width: 100,
                 height: 100,
-                // ภาพยาวเกินไป ตัดขอบให้มันกระชับ ไม่งั้นโลโก้จะเล็ก
+                
               ),
               // child: const Text(
               //   'Wawa Studio',
@@ -227,7 +228,7 @@ class DesktopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image: AssetImage('assets/image/pic_12.JPG'),
                                 ),
                               ))
                         ],
@@ -258,7 +259,7 @@ class DesktopHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                           Text(
-                            'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
+                            'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                         ],
@@ -277,7 +278,7 @@ class DesktopHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                           Text(
-                            'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
+                            'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                         ],
@@ -858,7 +859,7 @@ class _MobileHomepageState extends State<MobileHomepage> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image: AssetImage('assets/image/pic_12.JPG'),
                                 ),
                               ),
                             ),
@@ -891,7 +892,7 @@ class _MobileHomepageState extends State<MobileHomepage> {
                                 )),
                             const SizedBox(height: 20),
                             const Text(
-                              'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
+                              'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
                             ),
@@ -918,7 +919,7 @@ class _MobileHomepageState extends State<MobileHomepage> {
                                 )),
                             const SizedBox(height: 20),
                             const Text(
-                              'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
+                              'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
                             ),

@@ -37,10 +37,10 @@ class DesktopProfilePage extends StatelessWidget {
                 ),
                 color: AppColor.luxuryYellow,
               ),
-              child: const Text(
-                'Wawa Studio',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              child: const Image(
+                image: AssetImage('assets/image/wawalogo.png'), 
+                width: 100,
+                height: 100,
               ),
             ),
             Container(
