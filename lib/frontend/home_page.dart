@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:wawastudio/main.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -63,7 +63,9 @@ class DesktopHomePage extends StatelessWidget {
                 color: AppColor.luxuryYellow,
               ),
               child: const Image(
-                image: AssetImage('assets/image/wawalogo.png'),
+                image: AssetImage('assets/image/wawalogo.png'), width: 100,
+                height: 100,
+                // ภาพยาวเกินไป ตัดขอบให้มันกระชับ ไม่งั้นโลโก้จะเล็ก
               ),
               // child: const Text(
               //   'Wawa Studio',
@@ -650,7 +652,6 @@ class _MobileHomepageState extends State<MobileHomepage> {
 
   @override
   void initState() {
-    
     super.initState();
   }
 
@@ -670,7 +671,9 @@ class _MobileHomepageState extends State<MobileHomepage> {
   Widget build(BuildContext context) {
     return loading
         ? const Center(
-            child: CircularProgressIndicator(value: 3,),
+            child: CircularProgressIndicator(
+              value: 3,
+            ),
           )
         : Scaffold(
             backgroundColor: AppColor.luxuryBlack,
@@ -949,5 +952,3 @@ class _MobileHomepageState extends State<MobileHomepage> {
           );
   }
 }
-
-
