@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
             builder: (context, constraints) {
               if (constraints.maxWidth > 1200) {
                 return DesktopHomePage();
-              } else if (constraints.maxWidth > 800 &&
+              } else if (constraints.maxWidth > 750 &&
                   constraints.maxWidth < 1200) {
                 return TabletHomepage();
               } else {
@@ -454,21 +454,28 @@ class TabletHomepage extends StatelessWidget {
               ),
               padding: const EdgeInsets.all(50),
               height: MediaQuery.of(context).size.height * 0.7,
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Wawa Studio Yoga\nPilates, and workout',
+                        'Wawa Studio Yoga',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 35),
+                      ),
+                      const Text(
+                        'Pilates and workout',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 35),
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextButton.icon(
                             onPressed: () {},
@@ -503,14 +510,19 @@ class TabletHomepage extends StatelessWidget {
                   ),
                   Stack(
                     children: [
-                      CarouselSlider(
-                        items: generateImagesTiles(),
-                        options: CarouselOptions(
-                          enlargeCenterPage: true,
-                          autoPlay: true,
-                          aspectRatio: 18 / 8,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 3,
+                        width: MediaQuery.of(context).size.width / 1.5,
+                        child: CarouselSlider(
+                          items: generateImagesTiles(),
+                          options: CarouselOptions(
+                            viewportFraction: 1,
+                            enlargeCenterPage: true,
+                            autoPlay: true,
+                            aspectRatio: 8 / 10,
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   )
                 ],
@@ -808,14 +820,19 @@ class MobileHomepage extends StatelessWidget {
                   const SizedBox(height: 30),
                   Stack(
                     children: [
-                      CarouselSlider(
-                        items: generateImagesTiles(),
-                        options: CarouselOptions(
-                          enlargeCenterPage: true,
-                          autoPlay: true,
-                          aspectRatio: 2.2, // 18/8
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 3,
+                        width: MediaQuery.of(context).size.width / 1.5,
+                        child: CarouselSlider(
+                          items: generateImagesTiles(),
+                          options: CarouselOptions(
+                            viewportFraction: 1,
+                            enlargeCenterPage: true,
+                            autoPlay: true,
+                            aspectRatio: 16/9,
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   )
                 ],
