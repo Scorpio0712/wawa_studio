@@ -9,11 +9,11 @@ class GalleryPage extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth > 1200) {
-          return DesktopGalleryPage();
+          return const DesktopGalleryPage();
         } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
-          return TabletGalleryPage();
+          return const TabletGalleryPage();
         } else {
-          return MobileGalleryPage();
+          return const MobileGalleryPage();
         }
       },
     );
@@ -530,7 +530,6 @@ class MobileGalleryPage extends StatelessWidget {
                 ],
               ),
             ),
-            //Grid mobile
             const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -689,7 +688,7 @@ class MobileGalleryPage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/pic_9.JPG'),
+                            image: AssetImage('assets/image/pic_5.JPG'),
                           ),
                         )),
                   ],

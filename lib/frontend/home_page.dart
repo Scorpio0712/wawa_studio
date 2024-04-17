@@ -1,25 +1,52 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:wawastudio/main.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  bool loading = false;
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() {
+    setState(() {
+      loading = true;
+    });
+    if (mounted) {
+      setState(() {
+        loading = false;
+      });
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxWidth > 1200) {
-          return DesktopHomePage();
-        } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
-          return TabletHomepage();
-        } else {
-          return MobileHomepage();
-        }
-      },
-    );
+    return loading
+        ? const Center(
+            child: CircularProgressIndicator(),
+          )
+        : LayoutBuilder(
+            builder: (context, constraints) {
+              if (constraints.maxWidth > 1200) {
+                return DesktopHomePage();
+              } else if (constraints.maxWidth > 750 &&
+                  constraints.maxWidth < 1200) {
+                return TabletHomepage();
+              } else {
+                return MobileHomepage();
+              }
+            },
+          );
   }
 }
 
@@ -63,16 +90,10 @@ class DesktopHomePage extends StatelessWidget {
                 color: AppColor.luxuryYellow,
               ),
               child: const Image(
-                image: AssetImage('assets/image/wawalogo.png'), 
-                width: 100,
-                height: 100,
-                
+                image: AssetImage('assets/image/wawalogo.png'),
+                width: 50,
+                height: 50,
               ),
-              // child: const Text(
-              //   'Wawa Studio',
-              //   textAlign: TextAlign.center,
-              //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-              // ),
             ),
             Container(
               decoration: BoxDecoration(
@@ -136,7 +157,7 @@ class DesktopHomePage extends StatelessWidget {
                     opacity: 0.4),
               ),
               padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height * 0.7,
+              height: MediaQuery.of(context).size.height * 0.9,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -186,14 +207,19 @@ class DesktopHomePage extends StatelessWidget {
                   ),
                   Stack(
                     children: [
-                      CarouselSlider(
-                        items: generateImagesTiles(),
-                        options: CarouselOptions(
-                          enlargeCenterPage: true,
-                          autoPlay: true,
-                          aspectRatio: 18 / 8,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 2,
+                        width: MediaQuery.of(context).size.width / 2,
+                        child: CarouselSlider(
+                          items: generateImagesTiles(),
+                          options: CarouselOptions(
+                            viewportFraction: 1,
+                            enlargeCenterPage: true,
+                            autoPlay: true,
+                            aspectRatio: 18/8,
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   )
                 ],
@@ -433,21 +459,28 @@ class TabletHomepage extends StatelessWidget {
               ),
               padding: const EdgeInsets.all(50),
               height: MediaQuery.of(context).size.height * 0.7,
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Wawa Studio Yoga\nPilates, and workout',
+                        'Wawa Studio Yoga',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 35),
+                      ),
+                      const Text(
+                        'Pilates and workout',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 35),
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextButton.icon(
                             onPressed: () {},
@@ -482,14 +515,19 @@ class TabletHomepage extends StatelessWidget {
                   ),
                   Stack(
                     children: [
-                      CarouselSlider(
-                        items: generateImagesTiles(),
-                        options: CarouselOptions(
-                          enlargeCenterPage: true,
-                          autoPlay: true,
-                          aspectRatio: 18 / 8,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 3,
+                        width: MediaQuery.of(context).size.width / 1.5,
+                        child: CarouselSlider(
+                          items: generateImagesTiles(),
+                          options: CarouselOptions(
+                            viewportFraction: 1,
+                            enlargeCenterPage: true,
+                            autoPlay: true,
+                            aspectRatio: 8 / 10,
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   )
                 ],
@@ -520,7 +558,7 @@ class TabletHomepage extends StatelessWidget {
                       Column(
                         children: [
                           SizedBox(
-                              width: 400,
+                              width: 300,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -539,7 +577,7 @@ class TabletHomepage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           SizedBox(
-                              width: 400,
+                              width: 300,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -582,7 +620,7 @@ class TabletHomepage extends StatelessWidget {
                       Column(
                         children: [
                           SizedBox(
-                              width: 400,
+                              width: 300,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -621,15 +659,8 @@ class TabletHomepage extends StatelessWidget {
   }
 }
 
-class MobileHomepage extends StatefulWidget {
-  const MobileHomepage({super.key});
-
-  @override
-  State<MobileHomepage> createState() => _MobileHomepageState();
-}
-
-class _MobileHomepageState extends State<MobileHomepage> {
-  bool loading = false;
+class MobileHomepage extends StatelessWidget {
+  MobileHomepage({super.key});
 
   final List<String> imgList = [
     'assets/image/pic_1.jpg',
@@ -652,304 +683,268 @@ class _MobileHomepageState extends State<MobileHomepage> {
   }
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  loadData() async {
-    setState(() {
-      loading = true;
-    });
-
-    if (mounted) {
-      setState(() {
-        loading = false;
-      });
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return loading
-        ? const Center(
-            child: CircularProgressIndicator(
-              value: 3,
-            ),
-          )
-        : Scaffold(
-            backgroundColor: AppColor.luxuryBlack,
-            body: SingleChildScrollView(
-              child: Column(
+    return Scaffold(
+      backgroundColor: AppColor.luxuryBlack,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 10,
+                  color: AppColor.luxuryYellow,
+                ),
+                color: AppColor.luxuryYellow,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 10,
-                        color: AppColor.luxuryYellow,
-                      ),
+                  const Image(
+                    image: AssetImage('assets/image/wawalogo.png'),
+                    width: 100,
+                    height: 50,
+                  ),
+                  PopupMenuButton(
+                      icon: const Icon(Icons.menu),
                       color: AppColor.luxuryYellow,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          'Wawa Studio',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 20),
-                        ),
-                        PopupMenuButton(
-                            icon: const Icon(Icons.menu),
-                            color: AppColor.luxuryYellow,
-                            onSelected: (value) {
-                              if (value == 'Home') {
+                      itemBuilder: (context) => [
+                            PopupMenuItem(
+                              onTap: () {
                                 Navigator.pushNamed(context, '/home');
-                              } else if (value == 'Profile') {
+                              },
+                              child: const Text('Home'),
+                            ),
+                            PopupMenuItem(
+                              onTap: () {
                                 Navigator.pushNamed(context, '/profile');
-                              } else if (value == 'Courses') {
+                              },
+                              child: const Text('Profile'),
+                            ),
+                            PopupMenuItem(
+                              onTap: () {
                                 Navigator.pushNamed(context, '/course');
-                              } else if (value == 'Gallery') {
+                              },
+                              child: const Text('Courses'),
+                            ),
+                            PopupMenuItem(
+                              onTap: () {
                                 Navigator.pushNamed(context, '/gallery');
-                              } else if (value == 'Contact') {
+                              },
+                              child: const Text('Gallery'),
+                            ),
+                            PopupMenuItem(
+                              onTap: () {
                                 Navigator.pushNamed(context, '/contact');
-                              }
+                              },
+                              child: const Text('Contact'),
+                            ),
+                          ])
+                ],
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(50),
+              height: MediaQuery.of(context).size.height * 0.7,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/image/pic_18.JPG'),
+                    fit: BoxFit.cover,
+                    opacity: 0.4),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Wawa Studio Yoga',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25),
+                      ),
+                      const Text(
+                        'Pilates and workout',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
                             },
-                            itemBuilder: (context) => [
-                                  PopupMenuItem(
-                                    onTap: () {
-                                      setState(() {});
-                                      Navigator.pushNamed(context, '/profile');
-                                    },
-                                    value: 'Home',
-                                    child: Text('Home'),
-                                  ),
-                                  const PopupMenuItem(
-                                    value: 'Profile',
-                                    child: Text('Profile'),
-                                  ),
-                                  const PopupMenuItem(
-                                    value: 'Courses',
-                                    child: Text('Courses'),
-                                  ),
-                                  const PopupMenuItem(
-                                    value: 'Gallery',
-                                    child: Text('Gallery'),
-                                  ),
-                                  const PopupMenuItem(
-                                    value: 'Contact',
-                                    child: Text('Contact'),
-                                  )
-                                ])
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(50),
-                    height: MediaQuery.of(context).size.height * 0.7,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/image/pic_18.JPG'),
-                          fit: BoxFit.cover,
-                          opacity: 0.4),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const Text(
-                              'Wawa Studio Yoga',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
                             ),
-                            const Text(
-                              'Pilates and workout',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25),
+                            icon: const Icon(
+                              Icons.person,
+                              size: 20,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                ElevatedButton.icon(
-                                  onPressed: () {
-                                    Navigator.pushNamed(context, '/profile');
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.red,
-                                    foregroundColor: Colors.white,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                  ),
-                                  icon: const Icon(
-                                    Icons.person,
-                                    size: 20,
-                                  ),
-                                  label: const Text(
-                                    'Profile',
-                                    style: TextStyle(fontSize: 20),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 8,
-                                ),
-                                ElevatedButton.icon(
-                                  onPressed: () {
-                                    Navigator.pushNamed(context, '/contact');
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.green,
-                                      foregroundColor: Colors.white,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      )),
-                                  icon: const Icon(
-                                    Icons.call,
-                                    size: 20,
-                                  ),
-                                  label: const Text(
-                                    'Contact',
-                                    style: TextStyle(fontSize: 20),
-                                  ),
-                                )
-                              ],
-                            )
-                          ],
-                        ),
-                        const SizedBox(height: 30),
-                        Stack(
-                          children: [
-                            CarouselSlider(
-                              items: generateImagesTiles(),
-                              options: CarouselOptions(
-                                enlargeCenterPage: true,
-                                autoPlay: true,
-                                aspectRatio: 2.2, // 18/8
-                              ),
+                            label: const Text(
+                              'Profile',
+                              style: TextStyle(fontSize: 20),
                             ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 150),
-                  SizedBox(
-                    height: 1250,
-                    width: MediaQuery.of(context).size.width,
-                    child: Column(
-                      children: <Widget>[
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const Text(
-                              'Founder',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
-                            ),
-                            const SizedBox(height: 20),
-                            SizedBox(
-                              width: 350,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: const Image(
-                                  image: AssetImage('assets/image/pic_12.JPG'),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 20),
-                            const Text(
-                              'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 100),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const Text(
-                              'Courses',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
-                            ),
-                            const SizedBox(height: 20),
-                            SizedBox(
-                                width: 350,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: const Image(
-                                    image:
-                                        AssetImage('assets/image/pic_18.JPG'),
-                                  ),
+                          ),
+                          const SizedBox(
+                            width: 8,
+                          ),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/contact');
+                            },
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.green,
+                                foregroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
                                 )),
-                            const SizedBox(height: 20),
-                            const Text(
-                              'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
+                            icon: const Icon(
+                              Icons.call,
+                              size: 20,
                             ),
-                          ],
-                        ),
-                        const SizedBox(height: 100),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const Text(
-                              'Gallery',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
+                            label: const Text(
+                              'Contact',
+                              style: TextStyle(fontSize: 20),
                             ),
-                            const SizedBox(height: 20),
-                            SizedBox(
-                                width: 350,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: const Image(
-                                    image:
-                                        AssetImage('assets/image/pic_18.JPG'),
-                                  ),
-                                )),
-                            const SizedBox(height: 20),
-                            const Text(
-                              'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
+                          )
+                        ],
+                      )
+                    ],
                   ),
-                  const SizedBox(height: 20),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.1,
-                    width: MediaQuery.of(context).size.width,
-                    decoration:
-                        const BoxDecoration(color: AppColor.luxuryYellow),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          '(c) Copyright Wawa Studio Co.,LTD 2024',
-                          style: TextStyle(
-                            color: AppColor.luxuryGrey,
-                            fontSize: 14,
+                  const SizedBox(height: 30),
+                  Stack(
+                    children: [
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 3,
+                        width: MediaQuery.of(context).size.width / 1.5,
+                        child: CarouselSlider(
+                          items: generateImagesTiles(),
+                          options: CarouselOptions(
+                            viewportFraction: 1,
+                            enlargeCenterPage: true,
+                            autoPlay: true,
+                            aspectRatio: 16/9,
                           ),
                         ),
-                      ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(height: 150),
+            SizedBox(
+              height: 1250,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: <Widget>[
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const Text(
+                        'Founder',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
+                      SizedBox(
+                        width: 350,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_12.JPG'),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 100),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const Text(
+                        'Courses',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
+                      SizedBox(
+                          width: 350,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: const Image(
+                              image: AssetImage('assets/image/pic_18.JPG'),
+                            ),
+                          )),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 100),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const Text(
+                        'Gallery',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
+                      SizedBox(
+                          width: 350,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: const Image(
+                              image: AssetImage('assets/image/pic_18.JPG'),
+                            ),
+                          )),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.1,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(color: AppColor.luxuryYellow),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    '(c) Copyright Wawa Studio Co.,LTD 2024',
+                    style: TextStyle(
+                      color: AppColor.luxuryGrey,
+                      fontSize: 14,
                     ),
                   ),
                 ],
               ),
             ),
-          );
+          ],
+        ),
+      ),
+    );
   }
 }

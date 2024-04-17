@@ -1,22 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:wawastudio/main.dart';
 
-class ContactPage extends StatelessWidget {
+class ContactPage extends StatefulWidget {
   const ContactPage({super.key});
 
   @override
+  State<ContactPage> createState() => _ContactPageState();
+}
+
+class _ContactPageState extends State<ContactPage> {
+  bool loading = false;
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() {
+    setState(() {
+      loading = true;
+    });
+    if (mounted) {
+      setState(() {
+        loading = false;
+      });
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxWidth > 1200) {
-          return DesktopContactPage();
-        } else if (constraints.maxWidth > 800 && constraints.maxWidth < 1200) {
-          return TabletContactPage();
-        } else {
-          return MobileContactPage();
-        }
-      },
-    );
+    return loading
+        ? const Center(
+            child: CircularProgressIndicator(),
+          )
+        : LayoutBuilder(
+            builder: (context, constraints) {
+              if (constraints.maxWidth > 1200) {
+                return const DesktopContactPage();
+              } else if (constraints.maxWidth > 750 &&
+                  constraints.maxWidth < 1200) {
+                return const TabletContactPage();
+              } else {
+                return const MobileContactPage();
+              }
+            },
+          );
   }
 }
 
@@ -41,8 +69,8 @@ class DesktopContactPage extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 100,
-                height: 100,
+                width: 50,
+                height: 50,
               ),
             ),
             Container(
@@ -296,7 +324,6 @@ class TabletContactPage extends StatelessWidget {
                       Expanded(
                         flex: 1,
                         child: Column(
-                          
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
@@ -391,47 +418,45 @@ class MobileContactPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'Wawa Studio',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  const Image(
+                    image: AssetImage('assets/image/wawalogo.png'),
+                    width: 100,
+                    height: 50,
                   ),
                   PopupMenuButton(
                       icon: const Icon(Icons.menu),
                       color: AppColor.luxuryYellow,
-                      onSelected: (value) {
-                        if (value == 'Home') {
-                          Navigator.pushNamed(context, '/home');
-                        } else if (value == 'Profile') {
-                          Navigator.pushNamed(context, '/profile');
-                        } else if (value == 'Courses') {
-                          Navigator.pushNamed(context, '/course');
-                        } else if (value == 'Gallery') {
-                          Navigator.pushNamed(context, '/gallery');
-                        } else if (value == 'Contact') {
-                          Navigator.pushNamed(context, '/contact');
-                        }
-                      },
                       itemBuilder: (context) => [
-                            const PopupMenuItem(
-                              value: 'Home',
-                              child: Text('Home'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/home');
+                              },
+                              child: const Text('Home'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Profile',
-                              child: Text('Profile'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/profile');
+                              },
+                              child: const Text('Profile'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Courses',
-                              child: Text('Courses'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/course');
+                              },
+                              child: const Text('Courses'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Gallery',
-                              child: Text('Gallery'),
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/gallery');
+                              },
+                              child: const Text('Gallery'),
                             ),
-                            const PopupMenuItem(
-                              value: 'Contact',
-                              child: Text('Contact'),
-                            )
+                            PopupMenuItem(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/contact');
+                              },
+                              child: const Text('Contact'),
+                            ),
                           ])
                 ],
               ),
