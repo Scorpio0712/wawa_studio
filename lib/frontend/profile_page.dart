@@ -36,7 +36,7 @@ class _ProfilePageState extends State<ProfilePage> {
         : LayoutBuilder(builder: (context, constraints) {
             if (constraints.maxWidth > 1200) {
               return const DesktopProfilePage();
-            } else if (constraints.maxWidth > 800 &&
+            } else if (constraints.maxWidth > 750 &&
                 constraints.maxWidth < 1200) {
               return const TabletProfilePage();
             } else {

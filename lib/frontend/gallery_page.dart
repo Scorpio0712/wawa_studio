@@ -37,7 +37,7 @@ class _GalleryPageState extends State<GalleryPage> {
             builder: (context, constraints) {
               if (constraints.maxWidth > 1200) {
                 return const DesktopGalleryPage();
-              } else if (constraints.maxWidth > 800 &&
+              } else if (constraints.maxWidth > 750 &&
                   constraints.maxWidth < 1200) {
                 return const TabletGalleryPage();
               } else {

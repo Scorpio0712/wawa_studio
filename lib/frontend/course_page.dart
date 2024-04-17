@@ -37,7 +37,7 @@ class _CoursePageState extends State<CoursePage> {
             builder: (context, constraints) {
               if (constraints.maxWidth > 1200) {
                 return const DesktopCoursePage();
-              } else if (constraints.maxWidth > 800 &&
+              } else if (constraints.maxWidth > 750 &&
                   constraints.maxWidth < 1200) {
                 return const TabletCoursePage();
               } else {
@@ -320,6 +320,93 @@ class MobileCoursePage extends StatelessWidget {
                           ])
                 ],
               ),
+            ),
+            const SizedBox(height: 30),
+            Column(
+              children: [
+                const Text(
+                  'Courses',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+                const SizedBox(height: 50),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 1.5,
+                  height: MediaQuery.of(context).size.height,
+                  child: const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Yoga',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Text(
+                        'Yogadklsflksdjfl;jsdklfjlksdjflksjlfkjslkfjslkdfjlksdjfklsjfkljsdlkfjsddlkfjsdlkdfjsdlkfjsdlkjflksdjflksdjflksj',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        'Pilates',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Text(
+                        'Yogadklsflksdjfl;jsdklfjlksdjflksjlfkjslkfjslkdfjlksdjfklsjfkljsdlkfjsddlkfjsdlkdfjsdlkfjsdlkjflksdjflksdjflksj',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        'Workout',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Text(
+                        'Yogadklsflksdjfl;jsdklfjlksdjflksjlfkjslkfjslkdfjlksdjfklsjfkljsdlkfjsddlkfjsdlkdfjsdlkfjsdlkjflksdjflksdjflksj',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        'Boxing',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      Text(
+                        'Yogadklsflksdjfl;jsdklfjlksdjflksjlfkjslkfjslkdfjlksdjfklsjfkljsdlkfjsddlkfjsdlkdfjsdlkfjsdlkjflksdjflksdjflksj',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 20),
             Container(

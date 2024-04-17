@@ -157,7 +157,7 @@ class DesktopHomePage extends StatelessWidget {
                     opacity: 0.4),
               ),
               padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height * 0.7,
+              height: MediaQuery.of(context).size.height * 0.9,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -207,14 +207,19 @@ class DesktopHomePage extends StatelessWidget {
                   ),
                   Stack(
                     children: [
-                      CarouselSlider(
-                        items: generateImagesTiles(),
-                        options: CarouselOptions(
-                          enlargeCenterPage: true,
-                          autoPlay: true,
-                          aspectRatio: 18 / 8,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 2,
+                        width: MediaQuery.of(context).size.width / 2,
+                        child: CarouselSlider(
+                          items: generateImagesTiles(),
+                          options: CarouselOptions(
+                            viewportFraction: 1,
+                            enlargeCenterPage: true,
+                            autoPlay: true,
+                            aspectRatio: 18/8,
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   )
                 ],
@@ -553,7 +558,7 @@ class TabletHomepage extends StatelessWidget {
                       Column(
                         children: [
                           SizedBox(
-                              width: 400,
+                              width: 300,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -572,7 +577,7 @@ class TabletHomepage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           SizedBox(
-                              width: 400,
+                              width: 300,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -615,7 +620,7 @@ class TabletHomepage extends StatelessWidget {
                       Column(
                         children: [
                           SizedBox(
-                              width: 400,
+                              width: 300,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(

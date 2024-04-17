@@ -37,7 +37,7 @@ class _ContactPageState extends State<ContactPage> {
             builder: (context, constraints) {
               if (constraints.maxWidth > 1200) {
                 return const DesktopContactPage();
-              } else if (constraints.maxWidth > 800 &&
+              } else if (constraints.maxWidth > 750 &&
                   constraints.maxWidth < 1200) {
                 return const TabletContactPage();
               } else {
