@@ -99,29 +99,242 @@ class DesktopGalleryPage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
-            Container(
-              decoration: const BoxDecoration(),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        //รอใส่ grid 3X3 
-                      )
-                    ],
-                  )
-                  // Image(
-                  //   image: AssetImage('assets/image/pic_12.JPG'),
-                  //   width: 700,
-                  // ),
-                ],
-              ),
-            ),
             
+            // Grid
             const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_1.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_4.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_5.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_6.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_7.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_8.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_9.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_10.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_11.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_12.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_13.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_14.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_15.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_16.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_17.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 400,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_18.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+
             Container(
               height: MediaQuery.of(context).size.height * 0.1,
               width: MediaQuery.of(context).size.width,
@@ -317,7 +530,208 @@ class MobileGalleryPage extends StatelessWidget {
                 ],
               ),
             ),
+            //Grid mobile
             const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_1.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_4.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                
+              ],
+            ),
+            const SizedBox(height: 20),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_7.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_8.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+               
+              ],
+            ),
+            const SizedBox(height: 20),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_11.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_12.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                
+              ],
+            ),
+            const SizedBox(height: 20),
+
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_4.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_5.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                
+              ],
+            ),
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_8.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_9.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                
+              ],
+            ),
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_15.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                        width: 200,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/pic_16.JPG'),
+                          ),
+                        )),
+                  ],
+                ),
+                
+              ],
+            ),
+            const SizedBox(height: 20),
+
             Container(
               height: MediaQuery.of(context).size.height * 0.1,
               width: MediaQuery.of(context).size.width,
