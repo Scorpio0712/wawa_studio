@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wawastudio/main.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});
@@ -492,7 +493,7 @@ class MobileContactPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(width: 0, color: Colors.red),
                   ),
-                  child: const Column(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
@@ -508,9 +509,20 @@ class MobileContactPage extends StatelessWidget {
                         'Phone: +66 63-474-6519',
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
-                      Text(
-                        'FB: Wawastudio yoga and workout ',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      TextButton(
+                        onPressed: () async {
+                          var urlFB = Uri.https(
+                              'https://www.facebook.com/Gun.Scorpio/');
+                          if (await canLaunchUrl(urlFB)) {
+                            await launchUrl(urlFB);
+                          } else {
+                            throw 'Could not launch $urlFB';
+                          }
+                        },
+                        child: Text(
+                          'FB: Wawastudio yoga and workout ',
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        ),
                       ),
                       Text(
                         'Whatsapp:',
