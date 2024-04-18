@@ -471,11 +471,32 @@ class MobileProfilePage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 50,
-            ),
             Column(
               children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Container(
+                      alignment: Alignment.center,
+                      padding: const EdgeInsets.all(50),
+                      height: MediaQuery.of(context).size.height / 3,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/image/pic_18.JPG'),
+                            fit: BoxFit.cover,
+                            opacity: 0.4),
+                      ),
+                      child: const Text(
+                        'P R O F I L E',
+                        style: TextStyle(
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 50),
                 Container(
                   height: 225,
                   width: 225,
@@ -489,7 +510,7 @@ class MobileProfilePage extends StatelessWidget {
                           ))),
                 ),
                 const SizedBox(height: 20),
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 0.9,
                   child: const Column(children: <Widget>[
                     Column(
@@ -511,9 +532,15 @@ class MobileProfilePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 30,
+                    SizedBox(height: 20),
+                    Divider(
+                      height: 20,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                      color: Color(0xFFF9B17A),
                     ),
+                    SizedBox(height: 20),
                     Column(
                       children: <Widget>[
                         Text(

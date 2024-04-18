@@ -216,7 +216,7 @@ class DesktopHomePage extends StatelessWidget {
                             viewportFraction: 1,
                             enlargeCenterPage: true,
                             autoPlay: true,
-                            aspectRatio: 18/8,
+                            aspectRatio: 18 / 8,
                           ),
                         ),
                       )
@@ -834,7 +834,7 @@ class MobileHomepage extends StatelessWidget {
                             viewportFraction: 1,
                             enlargeCenterPage: true,
                             autoPlay: true,
-                            aspectRatio: 16/9,
+                            aspectRatio: 16 / 9,
                           ),
                         ),
                       )
@@ -845,7 +845,7 @@ class MobileHomepage extends StatelessWidget {
             ),
             const SizedBox(height: 150),
             SizedBox(
-              height: 1250,
+              height: 1500,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
@@ -871,9 +871,37 @@ class MobileHomepage extends StatelessWidget {
                         'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
+                      const SizedBox(height: 20),
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/profile');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0)),
+                        ),
+                        icon: const Icon(
+                          Icons.arrow_right,
+                          size: 20,
+                        ),
+                        label: const Text(
+                          'Profile',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ),
                     ],
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 50),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 50),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -895,9 +923,37 @@ class MobileHomepage extends StatelessWidget {
                         'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
+                      const SizedBox(height: 20),
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/profile');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0)),
+                        ),
+                        icon: const Icon(
+                          Icons.arrow_right,
+                          size: 20,
+                        ),
+                        label: const Text(
+                          'Courses',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ),
                     ],
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 50),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 50),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -918,6 +974,26 @@ class MobileHomepage extends StatelessWidget {
                       const Text(
                         'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
                         style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/profile');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0)),
+                        ),
+                        icon: const Icon(
+                          Icons.arrow_right,
+                          size: 20,
+                        ),
+                        label: const Text(
+                          'Gallery',
+                          style: TextStyle(fontSize: 20),
+                        ),
                       ),
                     ],
                   )

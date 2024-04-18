@@ -461,6 +461,29 @@ class MobileContactPage extends StatelessWidget {
                 ],
               ),
             ),
+            Column(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(50),
+                  height: MediaQuery.of(context).size.height / 3,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/image/pic_18.JPG'),
+                        fit: BoxFit.cover,
+                        opacity: 0.4),
+                  ),
+                  child: const Text(
+                    'C O N T A C T S',
+                    style: TextStyle(
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(height: 30),
             Column(
               children: [
@@ -472,16 +495,6 @@ class MobileContactPage extends StatelessWidget {
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Text(
-                        'Contact Informations',
-                        style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
                       Text(
                         'Wawa Studio Yoga',
                         style: TextStyle(fontSize: 26, color: Colors.white),

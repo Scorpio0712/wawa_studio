@@ -796,7 +796,30 @@ class MobileGalleryPage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            Column(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(50),
+                  height: MediaQuery.of(context).size.height / 3,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/image/pic_18.JPG'),
+                        fit: BoxFit.cover,
+                        opacity: 0.4),
+                  ),
+                  child: const Text(
+                    'G A L L E R Y',
+                    style: TextStyle(
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 50),
             SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,

@@ -321,20 +321,35 @@ class MobileCoursePage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 30),
             Column(
               children: [
-                const Text(
-                  'Courses',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      padding: const EdgeInsets.all(50),
+                      height: MediaQuery.of(context).size.height / 3,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/image/pic_18.JPG'),
+                            fit: BoxFit.cover,
+                            opacity: 0.4),
+                      ),
+                      child: const Text(
+                        'C O U R S E S',
+                        style: TextStyle(
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 50),
                 SizedBox(
                   width: MediaQuery.of(context).size.width / 1.5,
-                  height: MediaQuery.of(context).size.height,
+                  height: 1500,
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -352,9 +367,15 @@ class MobileCoursePage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),
-                      SizedBox(
-                        height: 30,
+                      SizedBox(height: 20),
+                      Divider(
+                        height: 20,
+                        thickness: 2,
+                        indent: 0,
+                        endIndent: 0,
+                        color: Color(0xFFF9B17A),
                       ),
+                      SizedBox(height: 20),
                       Text(
                         'Pilates',
                         style: TextStyle(
@@ -369,9 +390,15 @@ class MobileCoursePage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),
-                      SizedBox(
-                        height: 30,
+                      SizedBox(height: 20),
+                      Divider(
+                        height: 20,
+                        thickness: 2,
+                        indent: 0,
+                        endIndent: 0,
+                        color: Color(0xFFF9B17A),
                       ),
+                      SizedBox(height: 20),
                       Text(
                         'Workout',
                         style: TextStyle(
@@ -386,9 +413,15 @@ class MobileCoursePage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),
-                      SizedBox(
-                        height: 30,
+                      SizedBox(height: 20),
+                      Divider(
+                        height: 20,
+                        thickness: 2,
+                        indent: 0,
+                        endIndent: 0,
+                        color: Color(0xFFF9B17A),
                       ),
+                      SizedBox(height: 20),
                       Text(
                         'Boxing',
                         style: TextStyle(
