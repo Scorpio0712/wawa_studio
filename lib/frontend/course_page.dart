@@ -35,10 +35,13 @@ class _CoursePageState extends State<CoursePage> {
           )
         : LayoutBuilder(
             builder: (context, constraints) {
-              if (constraints.maxWidth > 1200) {
+              if (constraints.maxWidth > 1440) {
                 return const DesktopCoursePage();
+              } else if (constraints.maxWidth > 1024 &&
+                  constraints.maxWidth <= 1440) {
+                return const LaptopCoursePage();
               } else if (constraints.maxWidth > 750 &&
-                  constraints.maxWidth < 1200) {
+                  constraints.maxWidth <= 1024) {
                 return const TabletCoursePage();
               } else {
                 return const MobileCoursePage();
@@ -69,8 +72,8 @@ class DesktopCoursePage extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 50,
-                height: 50,
+                width: 75,
+                height: 75,
               ),
             ),
             Container(
@@ -125,6 +128,148 @@ class DesktopCoursePage extends StatelessWidget {
                         style: TextStyle(fontSize: 16),
                       )),
                 ],
+              ),
+            ),
+            Container(
+              alignment: Alignment.center,
+              padding: const EdgeInsets.all(50),
+              height: MediaQuery.of(context).size.height / 2,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/image/pic_18.JPG'),
+                    fit: BoxFit.cover,
+                    opacity: 0.4),
+              ),
+              child: const Text(
+                'C O U R S E S',
+                style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.1,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(color: AppColor.luxuryYellow),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    '(c) Copyright Wawa Studio Co.,LTD 2024',
+                    style: TextStyle(
+                      color: AppColor.luxuryGrey,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class LaptopCoursePage extends StatelessWidget {
+  const LaptopCoursePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColor.luxuryBlack,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 0,
+                  color: AppColor.luxuryYellow,
+                ),
+                color: AppColor.luxuryYellow,
+              ),
+              child: const Image(
+                image: AssetImage('assets/image/wawalogo.png'),
+                width: 75,
+                height: 75,
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 0,
+                  color: AppColor.luxuryYellow,
+                ),
+                color: AppColor.luxuryYellow,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/home');
+                      },
+                      child: const Text(
+                        'Home',
+                        style: TextStyle(fontSize: 16),
+                      )),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/profile');
+                      },
+                      child: const Text(
+                        'Profile',
+                        style: TextStyle(fontSize: 16),
+                      )),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/course');
+                      },
+                      child: const Text(
+                        'Courses',
+                        style: TextStyle(fontSize: 16),
+                      )),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/gallery');
+                      },
+                      child: const Text(
+                        'Gallery',
+                        style: TextStyle(fontSize: 16),
+                      )),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/contact');
+                      },
+                      child: const Text(
+                        'Contacts',
+                        style: TextStyle(fontSize: 16),
+                      )),
+                ],
+              ),
+            ),
+            Container(
+              alignment: Alignment.center,
+              padding: const EdgeInsets.all(50),
+              height: MediaQuery.of(context).size.height / 2,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/image/pic_18.JPG'),
+                    fit: BoxFit.cover,
+                    opacity: 0.4),
+              ),
+              child: const Text(
+                'C O U R S E S',
+                style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
             ),
             const SizedBox(height: 20),
@@ -229,6 +374,25 @@ class TabletCoursePage extends StatelessWidget {
                         style: TextStyle(fontSize: 16),
                       )),
                 ],
+              ),
+            ),
+            Container(
+              alignment: Alignment.center,
+              padding: const EdgeInsets.all(50),
+              height: MediaQuery.of(context).size.height / 3,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/image/pic_18.JPG'),
+                    fit: BoxFit.cover,
+                    opacity: 0.4),
+              ),
+              child: const Text(
+                'C O U R S E S',
+                style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
             ),
             const SizedBox(height: 20),

@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
+      theme: ThemeData(fontFamily: 'YesevaOne'),
       routes: {
         '/home': (context) => const HomePage(),
         '/profile': (context) => const ProfilePage(),

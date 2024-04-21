@@ -44,8 +44,8 @@ class DesktopGalleryPage extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 100,
-                height: 100,
+                width: 75,
+                height: 75,
               ),
             ),
             Container(
@@ -128,165 +128,220 @@ class DesktopGalleryPage extends StatelessWidget {
             // Grid
             const SizedBox(height: 50),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 1.2,
+              height: MediaQuery.of(context).size.height * 1.5,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        SizedBox(
-                            width: MediaQuery.of(context).size.width / 5,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: const Image(
-                                image: AssetImage('assets/image/pic_1.JPG'),
-                              ),
-                            )),
-                        SizedBox(
-                            width: MediaQuery.of(context).size.width / 5,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: const Image(
-                                image: AssetImage('assets/image/pic_4.JPG'),
-                              ),
-                            )),
-                        SizedBox(
-                            width: MediaQuery.of(context).size.width / 5,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: const Image(
-                                image: AssetImage('assets/image/pic_5.JPG'),
-                              ),
-                            )),
-                        SizedBox(
-                            width: MediaQuery.of(context).size.width / 5,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: const Image(
-                                image: AssetImage('assets/image/pic_6.JPG'),
-                              ),
-                            )),
-                      ]),
-                  const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_7.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_8.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_9.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_10.JPG'),
-                            ),
-                          )),
+                  Column(
+                    children: <Widget>[
+                      const Text(
+                        'Yoga',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                                width: MediaQuery.of(context).size.width / 5,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: const Image(
+                                    image: AssetImage('assets/image/pic_1.JPG'),
+                                  ),
+                                )),
+                            SizedBox(
+                                width: MediaQuery.of(context).size.width / 5,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: const Image(
+                                    image: AssetImage('assets/image/pic_4.JPG'),
+                                  ),
+                                )),
+                            SizedBox(
+                                width: MediaQuery.of(context).size.width / 5,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: const Image(
+                                    image: AssetImage('assets/image/pic_5.JPG'),
+                                  ),
+                                )),
+                            SizedBox(
+                                width: MediaQuery.of(context).size.width / 5,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: const Image(
+                                    image: AssetImage('assets/image/pic_6.JPG'),
+                                  ),
+                                )),
+                          ]),
                     ],
                   ),
                   const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_11.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_12.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_13.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_14.JPG'),
-                            ),
-                          )),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 20),
+                  Column(
+                    children: <Widget>[
+                      const Text(
+                        'Pilates',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_7.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_8.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_9.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_10.JPG'),
+                                ),
+                              )),
+                        ],
+                      ),
                     ],
                   ),
                   const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_15.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_16.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_17.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_18.JPG'),
-                            ),
-                          )),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 20),
+                  Column(
+                    children: <Widget>[
+                      const Text(
+                        'Workout',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_11.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_12.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_13.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_14.JPG'),
+                                ),
+                              )),
+                        ],
+                      ),
                     ],
                   ),
+                  const SizedBox(height: 20),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 20),
+                  Column(
+                    children: <Widget>[
+                      const Text(
+                        'Boxing',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_15.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_16.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_17.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                ),
+                              )),
+                        ],
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
             const SizedBox(height: 20),
-
             Container(
               height: MediaQuery.of(context).size.height * 0.1,
               width: MediaQuery.of(context).size.width,
@@ -415,161 +470,222 @@ class LaptopGalleryPage extends StatelessWidget {
             ),
             // Grid
             const SizedBox(height: 50),
+
             SizedBox(
-              height: MediaQuery.of(context).size.height * 1.5,
+              height: MediaQuery.of(context).size.height * 2,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        SizedBox(
-                            width: MediaQuery.of(context).size.width / 5,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: const Image(
-                                image: AssetImage('assets/image/pic_1.JPG'),
-                              ),
-                            )),
-                        SizedBox(
-                            width: MediaQuery.of(context).size.width / 5,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: const Image(
-                                image: AssetImage('assets/image/pic_4.JPG'),
-                              ),
-                            )),
-                        SizedBox(
-                            width: MediaQuery.of(context).size.width / 5,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: const Image(
-                                image: AssetImage('assets/image/pic_5.JPG'),
-                              ),
-                            )),
-                        SizedBox(
-                            width: MediaQuery.of(context).size.width / 5,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: const Image(
-                                image: AssetImage('assets/image/pic_6.JPG'),
-                              ),
-                            )),
-                      ]),
-                  const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_7.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_8.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_9.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_10.JPG'),
-                            ),
-                          )),
+                  Column(
+                    children: <Widget>[
+                      const Text(
+                        'Yoga',
+                        style: TextStyle(fontSize: 30, color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                                width: MediaQuery.of(context).size.width / 5,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: const Image(
+                                    image: AssetImage('assets/image/pic_1.JPG'),
+                                  ),
+                                )),
+                            SizedBox(
+                                width: MediaQuery.of(context).size.width / 5,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: const Image(
+                                    image: AssetImage('assets/image/pic_4.JPG'),
+                                  ),
+                                )),
+                            SizedBox(
+                                width: MediaQuery.of(context).size.width / 5,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: const Image(
+                                    image: AssetImage('assets/image/pic_5.JPG'),
+                                  ),
+                                )),
+                            SizedBox(
+                                width: MediaQuery.of(context).size.width / 5,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: const Image(
+                                    image: AssetImage('assets/image/pic_6.JPG'),
+                                  ),
+                                )),
+                          ]),
                     ],
                   ),
                   const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_11.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_12.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_13.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_14.JPG'),
-                            ),
-                          )),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 20),
+                  Column(
+                    children: <Widget>[
+                      const Text(
+                        'Pilates',
+                        style: TextStyle(fontSize: 30, color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_7.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_8.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_9.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_10.JPG'),
+                                ),
+                              )),
+                        ],
+                      ),
                     ],
                   ),
                   const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_15.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_16.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_17.JPG'),
-                            ),
-                          )),
-                      SizedBox(
-                          width: MediaQuery.of(context).size.width / 5,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: const Image(
-                              image: AssetImage('assets/image/pic_18.JPG'),
-                            ),
-                          )),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 20),
+                  Column(
+                    children: <Widget>[
+                      const Text(
+                        'Workout',
+                        style: TextStyle(fontSize: 30, color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_11.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_12.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_13.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_14.JPG'),
+                                ),
+                              )),
+                        ],
+                      ),
                     ],
                   ),
+                  const SizedBox(height: 20),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 20),
+                  Column(
+                    children: <Widget>[
+                      const Text(
+                        'Boxing',
+                        style: TextStyle(fontSize: 30, color: Colors.white),
+                      ),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_15.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_16.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_17.JPG'),
+                                ),
+                              )),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width / 5,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: const Image(
+                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                ),
+                              )),
+                        ],
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
@@ -676,6 +792,29 @@ class TabletGalleryPage extends StatelessWidget {
                       )),
                 ],
               ),
+            ),
+            Column(
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(50),
+                  height: MediaQuery.of(context).size.height / 2,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/image/pic_18.JPG'),
+                        fit: BoxFit.cover,
+                        opacity: 0.4),
+                  ),
+                  child: const Text(
+                    'G A L L E R Y',
+                    style: TextStyle(
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 20),
             Container(
