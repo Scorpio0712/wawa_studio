@@ -478,10 +478,10 @@ class TabletProfilePage extends StatelessWidget {
                 ),
                 color: AppColor.luxuryYellow,
               ),
-              child: const Text(
-                'Wawa Studio',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              child: const Image(
+                image: AssetImage('assets/image/wawalogo.png'),
+                width: 75,
+                height: 75,
               ),
             ),
             Container(
@@ -541,7 +541,7 @@ class TabletProfilePage extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height / 3,
+              height: MediaQuery.of(context).size.height / 4,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -575,7 +575,7 @@ class TabletProfilePage extends StatelessWidget {
                           ))),
                 ),
                 const SizedBox(height: 20),
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 0.9,
                   child: const Column(children: <Widget>[
                     Column(
@@ -596,18 +596,25 @@ class TabletProfilePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    SizedBox(height: 20),
+                    Divider(
                       height: 20,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                      color: Color(0xFFF9B17A),
                     ),
+                    SizedBox(height: 20),
                     Column(
                       children: <Widget>[
                         Text(
                           'Certificates',
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 18,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold),
                         ),
+                        SizedBox(height: 10),
                         Text(
                           '2017 - Ashtanga Yoga Training by Healthy Ning Yoga\n'
                           '2018 - TTC(Teacher Training) Yoga Training by Shivanantha Thailand\n'

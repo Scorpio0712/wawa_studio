@@ -571,8 +571,8 @@ class LaptopHomePage extends StatelessWidget {
                   Stack(
                     children: [
                       SizedBox(
-                        height: MediaQuery.of(context).size.height / 2,
-                        width: MediaQuery.of(context).size.width / 2,
+                        height: MediaQuery.of(context).size.height / 3,
+                        width: MediaQuery.of(context).size.width / 3,
                         child: CarouselSlider(
                           items: generateImagesTiles(),
                           options: CarouselOptions(
@@ -753,10 +753,10 @@ class TabletHomePage extends StatelessWidget {
                 ),
                 color: AppColor.luxuryYellow,
               ),
-              child: const Text(
-                'Wawa Studio',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              child: const Image(
+                image: AssetImage('assets/image/wawalogo.png'),
+                width: 75,
+                height: 75,
               ),
             ),
             Container(
@@ -821,7 +821,8 @@ class TabletHomePage extends StatelessWidget {
                     opacity: 0.4),
               ),
               padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height * 0.7,
+              height: MediaQuery.of(context).size.height / 2,
+              width: MediaQuery.of(context).size.width,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -879,8 +880,8 @@ class TabletHomePage extends StatelessWidget {
                   Stack(
                     children: [
                       SizedBox(
-                        height: MediaQuery.of(context).size.height / 3,
-                        width: MediaQuery.of(context).size.width / 1.5,
+                        height: MediaQuery.of(context).size.height / 4,
+                        width: MediaQuery.of(context).size.width / 2,
                         child: CarouselSlider(
                           items: generateImagesTiles(),
                           options: CarouselOptions(
@@ -898,23 +899,43 @@ class TabletHomePage extends StatelessWidget {
             ),
             const SizedBox(height: 150),
             SizedBox(
-              height: 1250,
+              height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Column(
+                      Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          Text(
+                          const Text(
                             'Founder',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
-                          Text(
+                          const Text(
                             'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const SizedBox(height: 20),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'Profile',
+                              style: TextStyle(fontSize: 20),
+                            ),
                           ),
                         ],
                       ),
@@ -949,15 +970,35 @@ class TabletHomePage extends StatelessWidget {
                               ))
                         ],
                       ),
-                      const Column(
+                      Column(
                         children: [
-                          Text(
+                          const Text(
                             'Courses',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
-                          Text(
+                          const Text(
                             'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const SizedBox(height: 20),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/course');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'Courses',
+                              style: TextStyle(fontSize: 20),
+                            ),
                           ),
                         ],
                       ),
@@ -967,16 +1008,36 @@ class TabletHomePage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Column(
+                      Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          Text(
+                          const Text(
                             'Gallery',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
-                          Text(
+                          const Text(
                             'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const SizedBox(height: 20),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/gallery');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'Gallery',
+                              style: TextStyle(fontSize: 20),
+                            ),
                           ),
                         ],
                       ),

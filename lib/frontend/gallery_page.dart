@@ -733,10 +733,10 @@ class TabletGalleryPage extends StatelessWidget {
                 ),
                 color: AppColor.luxuryYellow,
               ),
-              child: const Text(
-                'Wawa Studio',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              child: const Image(
+                image: AssetImage('assets/image/wawalogo.png'),
+                width: 75,
+                height: 75,
               ),
             ),
             Container(
@@ -798,7 +798,7 @@ class TabletGalleryPage extends StatelessWidget {
                 Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(50),
-                  height: MediaQuery.of(context).size.height / 2,
+                  height: MediaQuery.of(context).size.height / 4,
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(

@@ -476,10 +476,10 @@ class TabletContactPage extends StatelessWidget {
                 ),
                 color: AppColor.luxuryYellow,
               ),
-              child: const Text(
-                'Wawa Studio',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              child:const Image(
+                image: AssetImage('assets/image/wawalogo.png'),
+                width: 75,
+                height: 75,
               ),
             ),
             Container(
@@ -539,7 +539,7 @@ class TabletContactPage extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height / 3,
+              height: MediaQuery.of(context).size.height / 4,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -557,50 +557,76 @@ class TabletContactPage extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 border: Border.all(width: 0, color: Colors.red),
               ),
-              child: const Column(
+              child: Column(
                 children: <Widget>[
-                  Text(
+                  const Text(
                     'Contact Informations',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Expanded(
                         flex: 1,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Text(
-                              'Wawa Studio Yoga, Pilates, and Workout',
+                            const Text(
+                              'Wawa Studio Yoga,',
                               style:
                                   TextStyle(fontSize: 26, color: Colors.white),
                             ),
-                            Text(
+                            const Text(
+                              'Pilates, and Workout',
+                              style:
+                                  TextStyle(fontSize: 26, color: Colors.white),
+                            ),
+                            const SizedBox(height: 10),
+                            const Text(
                               'Phone: +66 63-474-6519',
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
                             ),
-                            Text(
-                              'Facebook: Wawastudio yoga and workout ',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
+                            TextButton.icon(
+                              onPressed: () async {
+                                var urlFB = Uri.parse(
+                                    'https://www.facebook.com/profile.php?id=100063924585309');
+                                if (await canLaunchUrl(urlFB)) {
+                                  await launchUrl(urlFB);
+                                } else {
+                                  throw 'Could not launch $urlFB';
+                                }
+                              },
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 20),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)),
+                              ),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.squareFacebook,
+                                color: Colors.blue,
+                                size: 20,
+                              ),
+                              label: const Text('Wawastudio yoga and workout'),
                             ),
-                            Text(
+                            const Text(
                               'Whatsapp:',
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
                             ),
-                            Text(
+                            const Text(
                               'Line: ',
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
@@ -608,7 +634,7 @@ class TabletContactPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Expanded(
+                      const Expanded(
                           flex: 1,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -764,7 +790,7 @@ class MobileContactPage extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () async {
-                          var urlFB = Uri.https(
+                          var urlFB = Uri.parse(
                               'https://www.facebook.com/Gun.Scorpio/');
                           if (await canLaunchUrl(urlFB)) {
                             await launchUrl(urlFB);
