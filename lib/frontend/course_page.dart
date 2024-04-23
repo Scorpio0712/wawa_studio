@@ -503,7 +503,7 @@ class MobileCoursePage extends StatelessWidget {
                       child: const Text(
                         'C O U R S E S',
                         style: TextStyle(
-                            fontSize: 50,
+                            fontSize: 40,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),
@@ -513,7 +513,7 @@ class MobileCoursePage extends StatelessWidget {
                 const SizedBox(height: 50),
                 SizedBox(
                   width: MediaQuery.of(context).size.width / 1.5,
-                  height: 1500,
+                  height: MediaQuery.of(context).size.height,
                   child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

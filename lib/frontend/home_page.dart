@@ -538,11 +538,13 @@ class LaptopHomePage extends StatelessWidget {
                       Row(
                         children: [
                           TextButton.icon(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.red,
                               foregroundColor: Colors.white,
-                              textStyle: const TextStyle(fontSize: 20),
+                              textStyle: const TextStyle(fontSize: 16),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5)),
                             ),
@@ -553,11 +555,13 @@ class LaptopHomePage extends StatelessWidget {
                             width: 10,
                           ),
                           TextButton.icon(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.green,
                               foregroundColor: Colors.white,
-                              textStyle: const TextStyle(fontSize: 20),
+                              textStyle: const TextStyle(fontSize: 16),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5)),
                             ),
@@ -814,15 +818,15 @@ class TabletHomePage extends StatelessWidget {
               ),
             ),
             Container(
+              padding: const EdgeInsets.all(50),
+              height: MediaQuery.of(context).size.height * 0.9,
+              width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/image/pic_18.JPG'),
                     fit: BoxFit.cover,
-                    opacity: 0.4),
+                    opacity: 0.3),
               ),
-              padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height / 2,
-              width: MediaQuery.of(context).size.width,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -881,15 +885,15 @@ class TabletHomePage extends StatelessWidget {
                   Stack(
                     children: [
                       SizedBox(
-                        height: MediaQuery.of(context).size.height / 4,
-                        width: MediaQuery.of(context).size.width / 2,
+                        height: MediaQuery.of(context).size.height / 3,
+                        width: MediaQuery.of(context).size.width / 1.5,
                         child: CarouselSlider(
                           items: generateImagesTiles(),
                           options: CarouselOptions(
                             viewportFraction: 1,
                             enlargeCenterPage: true,
                             autoPlay: true,
-                            aspectRatio: 8 / 10,
+                            aspectRatio: 18 / 8,
                           ),
                         ),
                       )
@@ -1171,12 +1175,12 @@ class MobileHomePage extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height * 0.7,
+              height: MediaQuery.of(context).size.height * 0.9,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/image/pic_18.JPG'),
                     fit: BoxFit.cover,
-                    opacity: 0.4),
+                    opacity: 0.3),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1202,45 +1206,41 @@ class MobileHomePage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton.icon(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/profile');
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.red,
-                              foregroundColor: Colors.white,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0)),
-                            ),
-                            icon: const Icon(
-                              Icons.person,
-                              size: 20,
-                            ),
-                            label: const Text(
-                              'Profile',
-                              style: TextStyle(fontSize: 20),
+                          SizedBox(
+                            width: 120,
+                            child: TextButton.icon(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/profile');
+                              },
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.red,
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 16),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)),
+                              ),
+                              icon: const Icon(Icons.person),
+                              label: const Text('Profile'),
                             ),
                           ),
                           const SizedBox(
                             width: 8,
                           ),
-                          ElevatedButton.icon(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/contact');
-                            },
-                            style: ElevatedButton.styleFrom(
+                          SizedBox(
+                            width: 120,
+                            child: TextButton.icon(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/contact');
+                              },
+                              style: TextButton.styleFrom(
                                 backgroundColor: Colors.green,
                                 foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 16),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                )),
-                            icon: const Icon(
-                              Icons.call,
-                              size: 20,
-                            ),
-                            label: const Text(
-                              'Contact',
-                              style: TextStyle(fontSize: 20),
+                                    borderRadius: BorderRadius.circular(5)),
+                              ),
+                              icon: const Icon(Icons.call),
+                              label: const Text('Contact'),
                             ),
                           )
                         ],
@@ -1259,7 +1259,7 @@ class MobileHomePage extends StatelessWidget {
                             viewportFraction: 1,
                             enlargeCenterPage: true,
                             autoPlay: true,
-                            aspectRatio: 16 / 9,
+                            aspectRatio: 18 / 8,
                           ),
                         ),
                       )
@@ -1297,7 +1297,7 @@ class MobileHomePage extends StatelessWidget {
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
                       const SizedBox(height: 20),
-                      ElevatedButton.icon(
+                      TextButton.icon(
                         onPressed: () {
                           Navigator.pushNamed(context, '/profile');
                         },
@@ -1349,7 +1349,7 @@ class MobileHomePage extends StatelessWidget {
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
                       const SizedBox(height: 20),
-                      ElevatedButton.icon(
+                      TextButton.icon(
                         onPressed: () {
                           Navigator.pushNamed(context, '/course');
                         },
@@ -1401,7 +1401,7 @@ class MobileHomePage extends StatelessWidget {
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
                       const SizedBox(height: 20),
-                      ElevatedButton.icon(
+                      TextButton.icon(
                         onPressed: () {
                           Navigator.pushNamed(context, '/gallery');
                         },

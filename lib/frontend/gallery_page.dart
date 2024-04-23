@@ -1,25 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:wawastudio/main.dart';
 
-class GalleryPage extends StatelessWidget {
+class GalleryPage extends StatefulWidget {
   const GalleryPage({super.key});
 
   @override
+  State<GalleryPage> createState() => _GalleryPageState();
+}
+
+class _GalleryPageState extends State<GalleryPage> {
+  bool loading = false;
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() {
+    setState(() {
+      loading = true;
+    });
+    if (mounted) {
+      setState(() {
+        loading = false;
+      });
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxWidth > 1440) {
-          return const DesktopGalleryPage();
-        } else if (constraints.maxWidth > 1024 &&
-            constraints.maxWidth <= 1440) {
-          return const LaptopGalleryPage();
-        } else if (constraints.maxWidth > 750 && constraints.maxWidth <= 1024) {
-          return const TabletGalleryPage();
-        } else {
-          return const MobileGalleryPage();
-        }
-      },
-    );
+    return loading
+        ? const Center(
+            child: CircularProgressIndicator(),
+          )
+        : LayoutBuilder(
+            builder: (context, constraints) {
+              if (constraints.maxWidth > 1440) {
+                return const DesktopGalleryPage();
+              } else if (constraints.maxWidth > 1024 &&
+                  constraints.maxWidth <= 1440) {
+                return const LaptopGalleryPage();
+              } else if (constraints.maxWidth > 750 &&
+                  constraints.maxWidth <= 1024) {
+                return const TabletGalleryPage();
+              } else {
+                return const MobileGalleryPage();
+              }
+            },
+          );
   }
 }
 
@@ -818,7 +846,7 @@ class TabletGalleryPage extends StatelessWidget {
             ),
             const SizedBox(height: 50),
             SizedBox(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height * 1.2,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
@@ -826,13 +854,14 @@ class TabletGalleryPage extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         'Yoga',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 30, color: Colors.white),
                       ),
+                      const SizedBox(height: 10),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             SizedBox(
-                                width: MediaQuery.of(context).size.width / 5,
+                                width: MediaQuery.of(context).size.width / 4.5,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
@@ -840,7 +869,7 @@ class TabletGalleryPage extends StatelessWidget {
                                   ),
                                 )),
                             SizedBox(
-                                width: MediaQuery.of(context).size.width / 5,
+                                width: MediaQuery.of(context).size.width / 4.5,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
@@ -848,7 +877,7 @@ class TabletGalleryPage extends StatelessWidget {
                                   ),
                                 )),
                             SizedBox(
-                                width: MediaQuery.of(context).size.width / 5,
+                                width: MediaQuery.of(context).size.width / 4.5,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
@@ -856,7 +885,7 @@ class TabletGalleryPage extends StatelessWidget {
                                   ),
                                 )),
                             SizedBox(
-                                width: MediaQuery.of(context).size.width / 5,
+                                width: MediaQuery.of(context).size.width / 4.5,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
@@ -879,13 +908,14 @@ class TabletGalleryPage extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         'Pilates',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 30, color: Colors.white),
                       ),
+                      const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -893,7 +923,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 ),
                               )),
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -901,7 +931,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 ),
                               )),
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -909,7 +939,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 ),
                               )),
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -933,13 +963,14 @@ class TabletGalleryPage extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         'Workout',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 30, color: Colors.white),
                       ),
+                      const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -947,7 +978,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 ),
                               )),
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -955,7 +986,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 ),
                               )),
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -963,7 +994,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 ),
                               )),
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -987,13 +1018,14 @@ class TabletGalleryPage extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         'Boxing',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 30, color: Colors.white),
                       ),
+                      const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -1001,7 +1033,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 ),
                               )),
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -1009,7 +1041,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 ),
                               )),
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -1017,7 +1049,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 ),
                               )),
                           SizedBox(
-                              width: MediaQuery.of(context).size.width / 5,
+                              width: MediaQuery.of(context).size.width / 4.5,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -1078,9 +1110,10 @@ class MobileGalleryPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'Wawa Studio',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  const Image(
+                    image: AssetImage('assets/image/wawalogo.png'),
+                    width: 100,
+                    height: 50,
                   ),
                   PopupMenuButton(
                       icon: const Icon(Icons.menu),
@@ -1139,7 +1172,7 @@ class MobileGalleryPage extends StatelessWidget {
                   child: const Text(
                     'G A L L E R Y',
                     style: TextStyle(
-                        fontSize: 50,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
@@ -1153,6 +1186,11 @@ class MobileGalleryPage extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
+                    const Text(
+                      'Yoga',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ),
+                    const SizedBox(height: 10),
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -1196,6 +1234,19 @@ class MobileGalleryPage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 20),
+                    const Divider(
+                      height: 20,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                      color: Color(0xFFF9B17A),
+                    ),
+                    const SizedBox(height: 20),
+                    const Text(
+                      'Pilates',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ),
+                    const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -1240,6 +1291,19 @@ class MobileGalleryPage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 20),
+                    const Divider(
+                      height: 20,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                      color: Color(0xFFF9B17A),
+                    ),
+                    const SizedBox(height: 20),
+                    const Text(
+                      'Workout',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ),
+                    const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -1284,6 +1348,19 @@ class MobileGalleryPage extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 20),
+                    const Divider(
+                      height: 20,
+                      thickness: 2,
+                      indent: 20,
+                      endIndent: 20,
+                      color: Color(0xFFF9B17A),
+                    ),
+                    const SizedBox(height: 20),
+                    const Text(
+                      'Boxing',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ),
+                    const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [

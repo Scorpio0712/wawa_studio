@@ -152,51 +152,74 @@ class DesktopContactPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(width: 0, color: Colors.red),
-              ),
-              child: const Column(
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
                 children: <Widget>[
-                  Text(
-                    'Contact Informations',
+                  const Text(
+                    'Contact Information',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Expanded(
                         flex: 1,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            Text(
-                              'Wawa Studio Yoga, Pilates, and Workout',
+                            const Text(
+                              'Wawa Studio Yoga,',
                               style:
                                   TextStyle(fontSize: 26, color: Colors.white),
                             ),
-                            Text(
+                            const Text(
+                              'Pilates, and Workout',
+                              style:
+                                  TextStyle(fontSize: 26, color: Colors.white),
+                            ),
+                            const SizedBox(height: 10),
+                            const Text(
                               'Phone: +66 63-474-6519',
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
                             ),
-                            Text(
-                              'Facebook: Wawastudio yoga and workout ',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
+                            TextButton.icon(
+                              onPressed: () async {
+                                var urlFB = Uri.parse(
+                                    'https://www.facebook.com/profile.php?id=100063924585309');
+                                if (await canLaunchUrl(urlFB)) {
+                                  await launchUrl(urlFB);
+                                } else {
+                                  throw 'Could not launch $urlFB';
+                                }
+                              },
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 20),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)),
+                              ),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.squareFacebook,
+                                color: Colors.blue,
+                                size: 20,
+                              ),
+                              label: const Text('Wawastudio yoga and workout'),
                             ),
-                            Text(
+                            const Text(
                               'Whatsapp:',
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
                             ),
-                            Text(
+                            const Text(
                               'Line: ',
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
@@ -205,18 +228,54 @@ class DesktopContactPage extends StatelessWidget {
                         ),
                       ),
                       Expanded(
-                          flex: 1,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text(
-                                'Map',
-                                style: TextStyle(
-                                    fontSize: 26, color: Colors.white),
-                              )
-                            ],
-                          ))
+                        flex: 1,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            const Text(
+                              'Map',
+                              style:
+                                  TextStyle(fontSize: 26, color: Colors.white),
+                            ),
+                            TextButton.icon(
+                              onPressed: () async {
+                                var urlGM = Uri.parse(
+                                    'https://www.google.com/maps/place/Wawa+studio+Phuket+Yoga+%26workout/@7.9433306,98.3565998,16z/data=!4m14!1m7!3m6!1s0x305031fdd61a54fd:0x312fe2cde54488fa!2sThe+River+Coffee+and+Food!8m2!3d7.942685!4d98.3602121!16s%2Fg%2F11f89n_4qv!3m5!1s0x305031b6d445fbd1:0xca5884799e1aaa5e!8m2!3d7.9425917!4d98.3601536!16s%2Fg%2F11t827tpjs?entry=ttu');
+                                if (await canLaunchUrl(urlGM)) {
+                                  await launchUrl(urlGM);
+                                } else {
+                                  throw 'Could not launch $urlGM';
+                                }
+                              },
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 20),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)),
+                              ),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.mapLocationDot,
+                                color: Colors.blue,
+                                size: 20,
+                              ),
+                              label: const Text(
+                                  '13 ภูเก็ต บ้านเลขที่ 25 Ko Kaeo, \nMueang Phuket District, Phuket 83000'),
+                            ),
+                          ],
+                        ),
+                      )
                     ],
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    alignment: Alignment.center,
+                    height: MediaQuery.of(context).size.height / 2,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(color: Colors.red),
+                    child: const Text(
+                      'Image',
+                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    ),
                   )
                 ],
               ),
@@ -345,10 +404,9 @@ class LaptopContactPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(width: 0, color: Colors.red),
-              ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
                   const Text(
@@ -362,7 +420,7 @@ class LaptopContactPage extends StatelessWidget {
                     height: 20,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Expanded(
                         flex: 1,
@@ -370,10 +428,16 @@ class LaptopContactPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             const Text(
-                              'Wawa Studio Yoga, Pilates, and Workout',
+                              'Wawa Studio Yoga,',
                               style:
                                   TextStyle(fontSize: 26, color: Colors.white),
                             ),
+                            const Text(
+                              'Pilates, and Workout',
+                              style:
+                                  TextStyle(fontSize: 26, color: Colors.white),
+                            ),
+                            const SizedBox(height: 10),
                             const Text(
                               'Phone: +66 63-474-6519',
                               style:
@@ -415,19 +479,55 @@ class LaptopContactPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const Expanded(
-                          flex: 1,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text(
-                                'Map',
-                                style: TextStyle(
-                                    fontSize: 26, color: Colors.white),
-                              )
-                            ],
-                          ))
+                      Expanded(
+                        flex: 1,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            const Text(
+                              'Map',
+                              style:
+                                  TextStyle(fontSize: 26, color: Colors.white),
+                            ),
+                            TextButton.icon(
+                              onPressed: () async {
+                                var urlGM = Uri.parse(
+                                    'https://www.google.com/maps/place/Wawa+studio+Phuket+Yoga+%26workout/@7.9433306,98.3565998,16z/data=!4m14!1m7!3m6!1s0x305031fdd61a54fd:0x312fe2cde54488fa!2sThe+River+Coffee+and+Food!8m2!3d7.942685!4d98.3602121!16s%2Fg%2F11f89n_4qv!3m5!1s0x305031b6d445fbd1:0xca5884799e1aaa5e!8m2!3d7.9425917!4d98.3601536!16s%2Fg%2F11t827tpjs?entry=ttu');
+                                if (await canLaunchUrl(urlGM)) {
+                                  await launchUrl(urlGM);
+                                } else {
+                                  throw 'Could not launch $urlGM';
+                                }
+                              },
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 20),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)),
+                              ),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.mapLocationDot,
+                                color: Colors.blue,
+                                size: 20,
+                              ),
+                              label: const Text(
+                                  '13 ภูเก็ต บ้านเลขที่ 25 Ko Kaeo, \nMueang Phuket District, Phuket 83000'),
+                            ),
+                          ],
+                        ),
+                      )
                     ],
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    alignment: Alignment.center,
+                    height: MediaQuery.of(context).size.height / 2,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(color: Colors.red),
+                    child: const Text(
+                      'Image',
+                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    ),
                   )
                 ],
               ),
@@ -476,7 +576,7 @@ class TabletContactPage extends StatelessWidget {
                 ),
                 color: AppColor.luxuryYellow,
               ),
-              child:const Image(
+              child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
                 width: 75,
                 height: 75,
@@ -556,16 +656,13 @@ class TabletContactPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                border: Border.all(width: 0, color: Colors.red),
-              ),
               child: Column(
                 children: <Widget>[
                   const Text(
-                    'Contact Informations',
+                    'Contact Information',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
@@ -634,19 +731,55 @@ class TabletContactPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const Expanded(
-                          flex: 1,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text(
-                                'Map',
-                                style: TextStyle(
-                                    fontSize: 26, color: Colors.white),
-                              )
-                            ],
-                          ))
+                      Expanded(
+                        flex: 1,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            const Text(
+                              'Map',
+                              style:
+                                  TextStyle(fontSize: 26, color: Colors.white),
+                            ),
+                            TextButton.icon(
+                              onPressed: () async {
+                                var urlGM = Uri.parse(
+                                    'https://www.google.com/maps/place/Wawa+studio+Phuket+Yoga+%26workout/@7.9433306,98.3565998,16z/data=!4m14!1m7!3m6!1s0x305031fdd61a54fd:0x312fe2cde54488fa!2sThe+River+Coffee+and+Food!8m2!3d7.942685!4d98.3602121!16s%2Fg%2F11f89n_4qv!3m5!1s0x305031b6d445fbd1:0xca5884799e1aaa5e!8m2!3d7.9425917!4d98.3601536!16s%2Fg%2F11t827tpjs?entry=ttu');
+                                if (await canLaunchUrl(urlGM)) {
+                                  await launchUrl(urlGM);
+                                } else {
+                                  throw 'Could not launch $urlGM';
+                                }
+                              },
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 20),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)),
+                              ),
+                              icon: const FaIcon(
+                                FontAwesomeIcons.mapLocationDot,
+                                color: Colors.blue,
+                                size: 20,
+                              ),
+                              label: const Text(
+                                  '13 ภูเก็ต บ้านเลขที่ 25 Ko Kaeo, \nMueang Phuket District, Phuket 83000'),
+                            ),
+                          ],
+                        ),
+                      )
                     ],
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    alignment: Alignment.center,
+                    height: MediaQuery.of(context).size.height / 2,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(color: Colors.red),
+                    child: const Text(
+                      'Image',
+                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    ),
                   )
                 ],
               ),
@@ -755,9 +888,9 @@ class MobileContactPage extends StatelessWidget {
                         opacity: 0.4),
                   ),
                   child: const Text(
-                    'C O N T A C T S',
+                    'C O N T A C T',
                     style: TextStyle(
-                        fontSize: 50,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
@@ -765,61 +898,103 @@ class MobileContactPage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 30),
-            Column(
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 0, color: Colors.red),
+            SizedBox(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: <Widget>[
+                  const Text(
+                    'Contact Information',
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      const Text(
-                        'Wawa Studio Yoga',
-                        style: TextStyle(fontSize: 26, color: Colors.white),
-                      ),
-                      const Text(
-                        'Pilates and Workout',
-                        style: TextStyle(fontSize: 26, color: Colors.white),
-                      ),
-                      const SizedBox(height: 20),
-                      const Text(
-                        'Phone: +66 63-474-6519',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
-                      ),
-                      TextButton(
-                        onPressed: () async {
-                          var urlFB = Uri.parse(
-                              'https://www.facebook.com/Gun.Scorpio/');
-                          if (await canLaunchUrl(urlFB)) {
-                            await launchUrl(urlFB);
-                          } else {
-                            throw 'Could not launch $urlFB';
-                          }
-                        },
-                        child: const Text(
-                          'FB: Wawastudio yoga and workout ',
-                          style: TextStyle(fontSize: 18, color: Colors.white),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        const Text(
+                          'Phone: +66 63-474-6519',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
-                      ),
-                      const Text(
-                        'Whatsapp:',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
-                      ),
-                      const Text(
-                        'Line: ',
-                        style: TextStyle(fontSize: 18, color: Colors.white),
-                      ),
-                      const SizedBox(height: 20),
-                      const Text(
-                        'Map',
-                        style: TextStyle(fontSize: 26, color: Colors.white),
-                      ),
-                    ],
+                        TextButton.icon(
+                          onPressed: () async {
+                            var urlFB = Uri.parse(
+                                'https://www.facebook.com/profile.php?id=100063924585309');
+                            if (await canLaunchUrl(urlFB)) {
+                              await launchUrl(urlFB);
+                            } else {
+                              throw 'Could not launch $urlFB';
+                            }
+                          },
+                          style: TextButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            textStyle: const TextStyle(fontSize: 20),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(5)),
+                          ),
+                          icon: const FaIcon(
+                            FontAwesomeIcons.squareFacebook,
+                            color: Colors.blue,
+                            size: 20,
+                          ),
+                          label: const Text('Wawastudio yoga and workout'),
+                        ),
+                        const Text(
+                          'Whatsapp:',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                        const Text(
+                          'Line: ',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                        const SizedBox(height: 30),
+                        const Text(
+                          'Map',
+                          style: TextStyle(fontSize: 26, color: Colors.white),
+                        ),
+                        TextButton.icon(
+                          onPressed: () async {
+                            var urlGM = Uri.parse(
+                                'https://www.google.com/maps/place/Wawa+studio+Phuket+Yoga+%26workout/@7.9433306,98.3565998,16z/data=!4m14!1m7!3m6!1s0x305031fdd61a54fd:0x312fe2cde54488fa!2sThe+River+Coffee+and+Food!8m2!3d7.942685!4d98.3602121!16s%2Fg%2F11f89n_4qv!3m5!1s0x305031b6d445fbd1:0xca5884799e1aaa5e!8m2!3d7.9425917!4d98.3601536!16s%2Fg%2F11t827tpjs?entry=ttu');
+                            if (await canLaunchUrl(urlGM)) {
+                              await launchUrl(urlGM);
+                            } else {
+                              throw 'Could not launch $urlGM';
+                            }
+                          },
+                          style: TextButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            textStyle: const TextStyle(fontSize: 20),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(5)),
+                          ),
+                          icon: const FaIcon(
+                            FontAwesomeIcons.mapLocationDot,
+                            color: Colors.blue,
+                            size: 20,
+                          ),
+                          label: const Text(
+                              '13 ภูเก็ต บ้านเลขที่ 25 Ko Kaeo, \nMueang Phuket District, Phuket 83000'),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  const SizedBox(height: 20),
+                  Container(
+                    alignment: Alignment.center,
+                    height: MediaQuery.of(context).size.height / 2,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(color: Colors.red),
+                    child: const Text(
+                      'Image',
+                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    ),
+                  )
+                ],
+              ),
             ),
             const SizedBox(height: 20),
             Container(

@@ -748,7 +748,7 @@ class MobileProfilePage extends StatelessWidget {
                       child: const Text(
                         'P R O F I L E',
                         style: TextStyle(
-                            fontSize: 50,
+                            fontSize: 40,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),
