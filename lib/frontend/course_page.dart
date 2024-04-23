@@ -379,7 +379,7 @@ class TabletCoursePage extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height / 4,
+              height: MediaQuery.of(context).size.height / 3,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(

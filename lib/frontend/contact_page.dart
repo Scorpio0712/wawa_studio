@@ -539,7 +539,7 @@ class TabletContactPage extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               padding: const EdgeInsets.all(50),
-              height: MediaQuery.of(context).size.height / 4,
+              height: MediaQuery.of(context).size.height / 3,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -775,16 +775,16 @@ class MobileContactPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
-                      Text(
+                      const Text(
                         'Wawa Studio Yoga',
                         style: TextStyle(fontSize: 26, color: Colors.white),
                       ),
-                      Text(
+                      const Text(
                         'Pilates and Workout',
                         style: TextStyle(fontSize: 26, color: Colors.white),
                       ),
-                      SizedBox(height: 20),
-                      Text(
+                      const SizedBox(height: 20),
+                      const Text(
                         'Phone: +66 63-474-6519',
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
@@ -798,21 +798,21 @@ class MobileContactPage extends StatelessWidget {
                             throw 'Could not launch $urlFB';
                           }
                         },
-                        child: Text(
+                        child: const Text(
                           'FB: Wawastudio yoga and workout ',
                           style: TextStyle(fontSize: 18, color: Colors.white),
                         ),
                       ),
-                      Text(
+                      const Text(
                         'Whatsapp:',
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
-                      Text(
+                      const Text(
                         'Line: ',
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
-                      SizedBox(height: 20),
-                      Text(
+                      const SizedBox(height: 20),
+                      const Text(
                         'Map',
                         style: TextStyle(fontSize: 26, color: Colors.white),
                       ),

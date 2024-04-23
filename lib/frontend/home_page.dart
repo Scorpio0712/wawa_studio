@@ -877,6 +877,7 @@ class TabletHomePage extends StatelessWidget {
                       )
                     ],
                   ),
+                  const SizedBox(height: 10),
                   Stack(
                     children: [
                       SizedBox(
