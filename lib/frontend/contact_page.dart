@@ -271,10 +271,14 @@ class DesktopContactPage extends StatelessWidget {
                     alignment: Alignment.center,
                     height: MediaQuery.of(context).size.height / 2,
                     width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(color: Colors.red),
-                    child: const Text(
-                      'Image',
-                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/image/studio_image.png'),
+                          fit: BoxFit.cover,
+                          opacity: 0.4),
+                    ),
+                    child: const Image(
+                      image: AssetImage('assets/image/studio_image.png'),
                     ),
                   )
                 ],
@@ -523,10 +527,14 @@ class LaptopContactPage extends StatelessWidget {
                     alignment: Alignment.center,
                     height: MediaQuery.of(context).size.height / 2,
                     width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(color: Colors.red),
-                    child: const Text(
-                      'Image',
-                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/image/studio_image.png'),
+                          fit: BoxFit.cover,
+                          opacity: 0.4),
+                    ),
+                    child: const Image(
+                      image: AssetImage('assets/image/studio_image.png'),
                     ),
                   )
                 ],
@@ -775,10 +783,14 @@ class TabletContactPage extends StatelessWidget {
                     alignment: Alignment.center,
                     height: MediaQuery.of(context).size.height / 2,
                     width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(color: Colors.red),
-                    child: const Text(
-                      'Image',
-                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/image/studio_image.png'),
+                          fit: BoxFit.cover,
+                          opacity: 0.4),
+                    ),
+                    child: const Image(
+                      image: AssetImage('assets/image/studio_image.png'),
                     ),
                   )
                 ],
@@ -987,10 +999,14 @@ class MobileContactPage extends StatelessWidget {
                     alignment: Alignment.center,
                     height: MediaQuery.of(context).size.height / 2,
                     width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(color: Colors.red),
-                    child: const Text(
-                      'Image',
-                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/image/studio_image.png'),
+                          fit: BoxFit.cover,
+                          opacity: 0.4),
+                    ),
+                    child: const Image(
+                      image: AssetImage('assets/image/studio_image.png'),
                     ),
                   )
                 ],

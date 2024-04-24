@@ -865,7 +865,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_1.JPG'),
+                                    image: AssetImage('assets/image/pic_13.JPG'),
                                   ),
                                 )),
                             SizedBox(
