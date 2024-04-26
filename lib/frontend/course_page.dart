@@ -149,6 +149,7 @@ class DesktopCoursePage extends StatelessWidget {
                     color: Colors.white),
               ),
             ),
+            
             const SizedBox(height: 20),
             Container(
               height: MediaQuery.of(context).size.height * 0.1,
