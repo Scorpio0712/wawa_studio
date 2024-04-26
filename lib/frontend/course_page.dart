@@ -149,7 +149,248 @@ class DesktopCoursePage extends StatelessWidget {
                     color: Colors.white),
               ),
             ),
-            
+
+
+            const SizedBox(height: 20),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              SizedBox(
+                  width: MediaQuery.of(context).size.width / 5,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: const Image(
+                      image: AssetImage('assets/image/pic_1.JPG'),
+                    ),
+                  )),
+              Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          const Text(
+                            'YOGA',
+                            style: TextStyle(fontSize: 40, color: Colors.white),
+                          ),
+                          const Text(
+                            ' การรวมกาย จิต และวิญญาณ ให้เป็นหนึ่งเดียว',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Text(
+                            ' การฝึกโยคะเป็นกระบวนการสำหรับฝึกกาย ฝึกการหายใจ ',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Text(
+                            ' และฝึกจิตให้มีความจดจ่อกับเรื่องลมหายใจเข้าออก',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'สนใจติดต่อเลย',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
+                        ],
+                      ),
+              SizedBox(
+                  width: MediaQuery.of(context).size.width / 5,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: const Image(
+                      image: AssetImage('assets/image/pic_6.JPG'),
+                    ),
+                  )),
+            ]),
+
+            const SizedBox(height: 20),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              SizedBox(
+                  width: MediaQuery.of(context).size.width / 5,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: const Image(
+                      image: AssetImage('assets/image/pic_1.JPG'),
+                    ),
+                  )),
+              Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          const Text(
+                            'Pilates',
+                            style: TextStyle(fontSize: 40, color: Colors.white),
+                          ),
+                          const Text(
+                            ' การออกกำลังกายที่่มีการเคลื่อนไหวร่างกายเพียงเล็กน้อย',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Text(
+                            ' ดยเน้นการสร้างความแข็งแรงของกล้ามเนื้อแกนกลางลำตัว ',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Text(
+                            ' การเคลื่อนไหว และควบคุมความแข็งแรง',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'สนใจติดต่อเลย',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
+                        ],
+                      ),
+              SizedBox(
+                  width: MediaQuery.of(context).size.width / 5,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: const Image(
+                      image: AssetImage('assets/image/pic_6.JPG'),
+                    ),
+                  )),
+            ]),
+
+            const SizedBox(height: 20),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              SizedBox(
+                  width: MediaQuery.of(context).size.width / 5,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: const Image(
+                      image: AssetImage('assets/image/pic_1.JPG'),
+                    ),
+                  )),
+              Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          const Text(
+                            'เคาะขัน',
+                            style: TextStyle(fontSize: 40, color: Colors.white),
+                          ),
+                          const Text(
+                            ' การออกกำลังกายที่่มีการเคลื่อนไหวร่างกายเพียงเล็กน้อย',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Text(
+                            ' ดยเน้นการสร้างความแข็งแรงของกล้ามเนื้อแกนกลางลำตัว ',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Text(
+                            ' การเคลื่อนไหว และควบคุมความแข็งแรง',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'สนใจติดต่อเลย',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
+                        ],
+                      ),
+              SizedBox(
+                  width: MediaQuery.of(context).size.width / 5,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: const Image(
+                      image: AssetImage('assets/image/pic_6.JPG'),
+                    ),
+                  )),
+            ]),
+
+            const SizedBox(height: 20),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              SizedBox(
+                  width: MediaQuery.of(context).size.width / 5,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: const Image(
+                      image: AssetImage('assets/image/pic_1.JPG'),
+                    ),
+                  )),
+              Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          const Text(
+                            'มวย',
+                            style: TextStyle(fontSize: 40, color: Colors.white),
+                          ),
+                          const Text(
+                            ' การออกกำลังกายที่่มีการเคลื่อนไหวร่างกายเพียงเล็กน้อย',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Text(
+                            ' ดยเน้นการสร้างความแข็งแรงของกล้ามเนื้อแกนกลางลำตัว ',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Text(
+                            ' การเคลื่อนไหว และควบคุมความแข็งแรง',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'สนใจติดต่อเลย',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
+                        ],
+                      ),
+              SizedBox(
+                  width: MediaQuery.of(context).size.width / 5,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: const Image(
+                      image: AssetImage('assets/image/pic_6.JPG'),
+                    ),
+                  )),
+            ]),
+
             const SizedBox(height: 20),
             Container(
               height: MediaQuery.of(context).size.height * 0.1,
