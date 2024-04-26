@@ -364,7 +364,7 @@ class DesktopHomePage extends StatelessWidget {
                               size: 20,
                             ),
                             label: const Text(
-                              'Gallery',
+                              'สนใจติดต่อ',
                               style: TextStyle(fontSize: 20),
                             ),
                           ),
