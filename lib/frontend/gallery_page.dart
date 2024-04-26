@@ -139,7 +139,7 @@ class DesktopGalleryPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/image/pic_18.JPG'),
+                        image: AssetImage('assets/image/Head_2.JPG'),
                         fit: BoxFit.cover,
                         opacity: 0.4),
                   ),
@@ -174,7 +174,8 @@ class DesktopGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_1.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_1.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -182,7 +183,8 @@ class DesktopGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_4.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_2.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -190,7 +192,8 @@ class DesktopGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_5.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_3.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -198,7 +201,8 @@ class DesktopGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_6.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_4.JPG'),
                                   ),
                                 )),
                           ]),
@@ -227,7 +231,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_7.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -235,7 +240,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_8.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_2.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -243,7 +249,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_9.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_3.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -251,7 +258,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_10.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_4.JPG'),
                                 ),
                               )),
                         ],
@@ -281,7 +289,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_11.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -289,7 +298,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_12.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_2.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -297,7 +307,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_13.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_3.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -305,7 +316,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_14.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_4.JPG'),
                                 ),
                               )),
                         ],
@@ -335,7 +347,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_15.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -343,7 +356,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_16.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_2.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -351,7 +365,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_17.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_3.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -359,7 +374,8 @@ class DesktopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_4.JPG'),
                                 ),
                               )),
                         ],
@@ -482,7 +498,7 @@ class LaptopGalleryPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/image/pic_18.JPG'),
+                        image: AssetImage('assets/image/Head_2.JPG'),
                         fit: BoxFit.cover,
                         opacity: 0.4),
                   ),
@@ -498,7 +514,6 @@ class LaptopGalleryPage extends StatelessWidget {
             ),
             // Grid
             const SizedBox(height: 50),
-
             SizedBox(
               height: MediaQuery.of(context).size.height * 2,
               width: MediaQuery.of(context).size.width,
@@ -519,7 +534,8 @@ class LaptopGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_1.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_1.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -527,7 +543,8 @@ class LaptopGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_4.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_2.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -535,7 +552,8 @@ class LaptopGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_5.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_3.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -543,7 +561,8 @@ class LaptopGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_6.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_4.JPG'),
                                   ),
                                 )),
                           ]),
@@ -573,7 +592,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_7.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -581,7 +601,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_8.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_2.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -589,7 +610,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_9.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_3.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -597,7 +619,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_10.JPG'),
+                                  image:
+                                      AssetImage('assets/image/pPilates_4.JPG'),
                                 ),
                               )),
                         ],
@@ -628,7 +651,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_11.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -636,7 +660,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_12.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_2.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -644,7 +669,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_13.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_3.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -652,7 +678,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_14.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_4.JPG'),
                                 ),
                               )),
                         ],
@@ -683,7 +710,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_15.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -691,7 +719,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_16.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_2.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -699,7 +728,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_17.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_3.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -707,7 +737,8 @@ class LaptopGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_4.JPG'),
                                 ),
                               )),
                         ],
@@ -830,7 +861,7 @@ class TabletGalleryPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/image/pic_18.JPG'),
+                        image: AssetImage('assets/image/Head_2.JPG'),
                         fit: BoxFit.cover,
                         opacity: 0.4),
                   ),
@@ -865,7 +896,8 @@ class TabletGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_13.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_1.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -873,7 +905,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_4.JPG'),
+                                    image: AssetImage('assets/imageYoga_2.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -881,7 +913,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_5.JPG'),
+                                    image: AssetImage('assets/imageYoga_3.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -889,7 +921,7 @@ class TabletGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/image/pic_6.JPG'),
+                                    image: AssetImage('assets/imageYoga_4.JPG'),
                                   ),
                                 )),
                           ]),
@@ -919,7 +951,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_7.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -927,7 +960,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_8.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_2.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -935,7 +969,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_9.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_3.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -943,7 +978,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_10.JPG'),
+                                  image: AssetImage(
+                                      'assets/image/pPilWorkout.JPG'),
                                 ),
                               )),
                         ],
@@ -974,7 +1010,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_11.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -982,7 +1019,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_12.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_2.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -990,7 +1028,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_13.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_3.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -998,7 +1037,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_14.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_4.JPG'),
                                 ),
                               )),
                         ],
@@ -1029,7 +1069,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_15.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -1037,7 +1078,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_16.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_2.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -1045,7 +1087,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_17.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_3.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -1053,7 +1096,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Boxing_4.JPG'),
                                 ),
                               )),
                         ],
@@ -1165,7 +1209,7 @@ class MobileGalleryPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/image/pic_18.JPG'),
+                        image: AssetImage('assets/image/HYoga_.JPG'),
                         fit: BoxFit.cover,
                         opacity: 0.4),
                   ),
@@ -1199,7 +1243,7 @@ class MobileGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_1.JPG'),
+                                  image: AssetImage('assets/image/Yoga_1.JPG'),
                                 ),
                               )),
                           SizedBox(
@@ -1207,7 +1251,7 @@ class MobileGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_4.JPG'),
+                                  image: AssetImage('assets/image/Yoga_2.JPG'),
                                 ),
                               )),
                         ]),
@@ -1220,7 +1264,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_5.JPG'),
+                                image: AssetImage('assets/image/Yoga_3.JPG'),
                               ),
                             )),
                         SizedBox(
@@ -1228,7 +1272,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_6.JPG'),
+                                image: AssetImage('assets/image/Yoga_4.JPG'),
                               ),
                             )),
                       ],
@@ -1255,7 +1299,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_7.JPG'),
+                                image: AssetImage('assets/image/Pilates_1.JPG'),
                               ),
                             )),
                         SizedBox(
@@ -1263,7 +1307,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_8.JPG'),
+                                image: AssetImage('assets/image/Pilates_2.JPG'),
                               ),
                             )),
                       ],
@@ -1277,7 +1321,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_9.JPG'),
+                                image: AssetImage('assets/image/Pilates_3.JPG'),
                               ),
                             )),
                         SizedBox(
@@ -1285,7 +1329,8 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_10.JPG'),
+                                image:
+                                    AssetImage('assets/image/pPilWorkout_.JPG'),
                               ),
                             )),
                       ],
@@ -1312,7 +1357,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_11.JPG'),
+                                image: AssetImage('assets/image/Workout_1.JPG'),
                               ),
                             )),
                         SizedBox(
@@ -1320,7 +1365,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_12.JPG'),
+                                image: AssetImage('assets/image/Workout_2.JPG'),
                               ),
                             )),
                       ],
@@ -1334,7 +1379,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_13.JPG'),
+                                image: AssetImage('assets/image/Workout_3.JPG'),
                               ),
                             )),
                         SizedBox(
@@ -1342,7 +1387,8 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_14.JPG'),
+                                image:
+                                    AssetImage('assets/image/WorBoxing_.JPG'),
                               ),
                             )),
                       ],
@@ -1369,7 +1415,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_15.JPG'),
+                                image: AssetImage('assets/image/Boxing_1.JPG'),
                               ),
                             )),
                         SizedBox(
@@ -1377,7 +1423,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_16.JPG'),
+                                image: AssetImage('assets/image/Boxing_2.JPG'),
                               ),
                             )),
                       ],
@@ -1391,7 +1437,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_17.JPG'),
+                                image: AssetImage('assets/image/Boxing_3.JPG'),
                               ),
                             )),
                         SizedBox(
@@ -1399,7 +1445,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image: AssetImage('assets/image/pic_18.JPG'),
+                                image: AssetImage('assets/image/Boxing_4.JPG'),
                               ),
                             )),
                       ],

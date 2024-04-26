@@ -137,7 +137,7 @@ class DesktopCoursePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -260,7 +260,7 @@ class LaptopCoursePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -383,7 +383,7 @@ class TabletCoursePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -396,6 +396,181 @@ class TabletCoursePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 4,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                          ),
+                        ),
+                      ),
+                      const Column(
+                        children: [
+                          Text(
+                            'Yoga',
+                            style: TextStyle(fontSize: 35, color: Colors.white),
+                          ),
+                          Text(
+                            'Hello',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 4,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 4,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                          ),
+                        ),
+                      ),
+                      const Column(
+                        children: [
+                          Text(
+                            'Pilates',
+                            style: TextStyle(fontSize: 35, color: Colors.white),
+                          ),
+                          Text(
+                            'Hello',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 4,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 4,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                          ),
+                        ),
+                      ),
+                      const Column(
+                        children: [
+                          Text(
+                            'Workout',
+                            style: TextStyle(fontSize: 35, color: Colors.white),
+                          ),
+                          Text(
+                            'Hello',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 4,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 4,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                          ),
+                        ),
+                      ),
+                      const Column(
+                        children: [
+                          Text(
+                            'Boxing',
+                            style: TextStyle(fontSize: 35, color: Colors.white),
+                          ),
+                          Text(
+                            'Hello',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 4,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Image(
+                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
             Container(
               height: MediaQuery.of(context).size.height * 0.1,
               width: MediaQuery.of(context).size.width,
@@ -496,7 +671,7 @@ class MobileCoursePage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage('assets/image/pic_18.JPG'),
+                            image: AssetImage('assets/image/Head_2.JPG'),
                             fit: BoxFit.cover,
                             opacity: 0.4),
                       ),

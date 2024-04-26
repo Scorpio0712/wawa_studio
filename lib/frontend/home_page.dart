@@ -57,11 +57,11 @@ class DesktopHomePage extends StatelessWidget {
   DesktopHomePage({super.key});
 
   final List<String> imgList = [
-    'assets/image/pic_1.jpg',
-    'assets/image/pic_10.JPG',
-    'assets/image/pic_17.JPG',
-    'assets/image/pic_5.JPG',
-    'assets/image/pic_14.JPG',
+    'assets/image/Yoga_1.JPG',
+    'assets/image/Boxing_1.JPG',
+    'assets/image/Pilates_2.JPG',
+    'assets/image/Workout_4.JPG',
+    'assets/image/pic_8.JPG',
   ];
 
   List<Widget> generateImagesTiles() {
@@ -156,7 +156,7 @@ class DesktopHomePage extends StatelessWidget {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -277,7 +277,7 @@ class DesktopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_12.JPG'),
+                                  image: AssetImage('assets/image/Home_Founder.JPG'),
                                 ),
                               ))
                         ],
@@ -296,7 +296,7 @@ class DesktopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image: AssetImage('assets/image/Pilates_5.JPG'),
                                 ),
                               ))
                         ],
@@ -377,7 +377,7 @@ class DesktopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image: AssetImage('assets/image/Workout_3.JPG'),
                                 ),
                               ))
                         ],
@@ -416,11 +416,11 @@ class LaptopHomePage extends StatelessWidget {
   LaptopHomePage({super.key});
 
   final List<String> imgList = [
-    'assets/image/pic_1.jpg',
-    'assets/image/pic_10.JPG',
-    'assets/image/pic_17.JPG',
-    'assets/image/pic_5.JPG',
-    'assets/image/pic_14.JPG',
+    'assets/image/Yoga_1.JPG',
+    'assets/image/Boxing_1.JPG',
+    'assets/image/Pilates_2.JPG',
+    'assets/image/Workout_4.JPG',
+    'assets/image/pic_8.JPG',
   ];
 
   List<Widget> generateImagesTiles() {
@@ -515,7 +515,7 @@ class LaptopHomePage extends StatelessWidget {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -556,7 +556,7 @@ class LaptopHomePage extends StatelessWidget {
                           ),
                           TextButton.icon(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/profile');
+                              Navigator.pushNamed(context, '/contact');
                             },
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.green,
@@ -621,7 +621,7 @@ class LaptopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_12.JPG'),
+                                  image: AssetImage('assets/image/Home_Founder.JPG'),
                                 ),
                               ))
                         ],
@@ -640,7 +640,7 @@ class LaptopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image: AssetImage('assets/image/Pilates_5.JPG'),
                                 ),
                               ))
                         ],
@@ -683,7 +683,7 @@ class LaptopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image: AssetImage('assets/image/Workout_3.JPG'),
                                 ),
                               ))
                         ],
@@ -722,11 +722,11 @@ class TabletHomePage extends StatelessWidget {
   TabletHomePage({super.key});
 
   final List<String> imgList = [
-    'assets/image/pic_1.jpg',
-    'assets/image/pic_10.JPG',
-    'assets/image/pic_17.JPG',
-    'assets/image/pic_5.JPG',
-    'assets/image/pic_14.JPG'
+    'assets/image/Yoga_1.JPG',
+    'assets/image/Boxing_1.JPG',
+    'assets/image/Pilates_2.JPG',
+    'assets/image/Workout_4.JPG',
+    'assets/image/pic_8.JPG',
   ];
 
   List<Widget> generateImagesTiles() {
@@ -823,7 +823,7 @@ class TabletHomePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.3),
               ),
@@ -851,7 +851,9 @@ class TabletHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextButton.icon(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.red,
                               foregroundColor: Colors.white,
@@ -866,7 +868,7 @@ class TabletHomePage extends StatelessWidget {
                             width: 10,
                           ),
                           TextButton.icon(
-                            onPressed: () {},
+                            onPressed: () {Navigator.pushNamed(context, '/contact');},
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.green,
                               foregroundColor: Colors.white,
@@ -951,7 +953,7 @@ class TabletHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image: AssetImage('assets/image/Home_Founder.JPG'),
                                 ),
                               ))
                         ],
@@ -970,7 +972,7 @@ class TabletHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image: AssetImage('assets/image/Pilates_5.JPG'),
                                 ),
                               ))
                         ],
@@ -1053,7 +1055,7 @@ class TabletHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/pic_18.JPG'),
+                                  image: AssetImage('assets/image/Workout_3.JPG'),
                                 ),
                               ))
                         ],
@@ -1092,11 +1094,11 @@ class MobileHomePage extends StatelessWidget {
   MobileHomePage({super.key});
 
   final List<String> imgList = [
-    'assets/image/pic_1.jpg',
-    'assets/image/pic_10.JPG',
-    'assets/image/pic_17.JPG',
-    'assets/image/pic_5.JPG',
-    'assets/image/pic_14.JPG'
+    'assets/image/Yoga_1.JPG',
+    'assets/image/Boxing_1.JPG',
+    'assets/image/Pilates_2.JPG',
+    'assets/image/Workout_4.JPG',
+    'assets/image/pic_8.JPG',
   ];
 
   List<Widget> generateImagesTiles() {
@@ -1178,7 +1180,7 @@ class MobileHomePage extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.9,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.3),
               ),
@@ -1287,7 +1289,7 @@ class MobileHomePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/pic_12.JPG'),
+                            image: AssetImage('assets/image/Home_Founder.JPG'),
                           ),
                         ),
                       ),
@@ -1340,7 +1342,7 @@ class MobileHomePage extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: const Image(
-                              image: AssetImage('assets/image/pic_18.JPG'),
+                              image: AssetImage('assets/image/Pilates_5.JPG'),
                             ),
                           )),
                       const SizedBox(height: 20),
@@ -1392,7 +1394,7 @@ class MobileHomePage extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: const Image(
-                              image: AssetImage('assets/image/pic_18.JPG'),
+                              image: AssetImage('assets/image/Workout_3.JPG'),
                             ),
                           )),
                       const SizedBox(height: 20),

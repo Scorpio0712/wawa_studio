@@ -135,7 +135,7 @@ class DesktopProfilePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -161,11 +161,11 @@ class DesktopProfilePage extends StatelessWidget {
                       image: const DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage(
-                            'assets/image/pic_3.jpg',
+                            'assets/image/Profile.JPG',
                           ))),
                 ),
                 const SizedBox(height: 20),
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 0.9,
                   child: const Column(children: <Widget>[
                     Column(
@@ -340,7 +340,7 @@ class LaptopProfilePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -366,11 +366,11 @@ class LaptopProfilePage extends StatelessWidget {
                       image: const DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage(
-                            'assets/image/pic_3.jpg',
+                            'assets/image/Profile.JPG',
                           ))),
                 ),
                 const SizedBox(height: 20),
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width * 0.9,
                   child: const Column(children: <Widget>[
                     Column(
@@ -545,7 +545,7 @@ class TabletProfilePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -571,7 +571,7 @@ class TabletProfilePage extends StatelessWidget {
                       image: const DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage(
-                            'assets/image/pic_3.jpg',
+                            'assets/image/Profile.JPG',
                           ))),
                 ),
                 const SizedBox(height: 20),
@@ -741,7 +741,7 @@ class MobileProfilePage extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage('assets/image/pic_18.JPG'),
+                            image: AssetImage('assets/image/Head_2.JPG'),
                             fit: BoxFit.cover,
                             opacity: 0.4),
                       ),
@@ -765,7 +765,7 @@ class MobileProfilePage extends StatelessWidget {
                       image: const DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage(
-                            'assets/image/pic_3.jpg',
+                            'assets/image/Profile.JPG',
                           ))),
                 ),
                 const SizedBox(height: 20),

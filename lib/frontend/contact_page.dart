@@ -139,7 +139,7 @@ class DesktopContactPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -395,7 +395,7 @@ class LaptopContactPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -651,7 +651,7 @@ class TabletContactPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/image/pic_18.JPG'),
+                    image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
                     opacity: 0.4),
               ),
@@ -895,7 +895,7 @@ class MobileContactPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/image/pic_18.JPG'),
+                        image: AssetImage('assets/image/Head_2.JPG'),
                         fit: BoxFit.cover,
                         opacity: 0.4),
                   ),
