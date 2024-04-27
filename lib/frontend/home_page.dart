@@ -61,7 +61,7 @@ class DesktopHomePage extends StatelessWidget {
     'assets/image/Boxing_1.JPG',
     'assets/image/Pilates_2.JPG',
     'assets/image/Workout_4.JPG',
-    'assets/image/pic_8.JPG',
+    'assets/image/Workshop_4.JPG',
   ];
 
   List<Widget> generateImagesTiles() {
@@ -420,7 +420,7 @@ class LaptopHomePage extends StatelessWidget {
     'assets/image/Boxing_1.JPG',
     'assets/image/Pilates_2.JPG',
     'assets/image/Workout_4.JPG',
-    'assets/image/pic_8.JPG',
+    'assets/image/Workshop_4.JPG',
   ];
 
   List<Widget> generateImagesTiles() {
@@ -726,7 +726,7 @@ class TabletHomePage extends StatelessWidget {
     'assets/image/Boxing_1.JPG',
     'assets/image/Pilates_2.JPG',
     'assets/image/Workout_4.JPG',
-    'assets/image/pic_8.JPG',
+    'assets/image/Workshop_4.JPG',
   ];
 
   List<Widget> generateImagesTiles() {
@@ -1098,7 +1098,7 @@ class MobileHomePage extends StatelessWidget {
     'assets/image/Boxing_1.JPG',
     'assets/image/Pilates_2.JPG',
     'assets/image/Workout_4.JPG',
-    'assets/image/pic_8.JPG',
+    'assets/image/Workshop_4.JPG',
   ];
 
   List<Widget> generateImagesTiles() {

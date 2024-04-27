@@ -149,10 +149,10 @@ class DesktopCoursePage extends StatelessWidget {
                     color: Colors.white),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 50),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height * 1.5,
               child: Column(
                 children: <Widget>[
                   Row(
@@ -184,7 +184,7 @@ class DesktopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Yoga_2.JPG'),
                           ),
                         ),
                       ),
@@ -207,7 +207,7 @@ class DesktopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Pilates_3.JPG'),
                           ),
                         ),
                       ),
@@ -228,7 +228,7 @@ class DesktopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Pilates_2.JPG'),
                           ),
                         ),
                       ),
@@ -251,7 +251,7 @@ class DesktopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Workout_1.JPG'),
                           ),
                         ),
                       ),
@@ -272,7 +272,7 @@ class DesktopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Workout_4.JPG'),
                           ),
                         ),
                       ),
@@ -295,7 +295,7 @@ class DesktopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Boxing_4.JPG'),
                           ),
                         ),
                       ),
@@ -316,7 +316,7 @@ class DesktopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Boxing_1.JPG'),
                           ),
                         ),
                       ),
@@ -481,7 +481,7 @@ class LaptopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Yoga_2.JPG'),
                           ),
                         ),
                       ),
@@ -504,7 +504,7 @@ class LaptopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Pilates_3.JPG'),
                           ),
                         ),
                       ),
@@ -525,7 +525,7 @@ class LaptopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Pilates_2.JPG'),
                           ),
                         ),
                       ),
@@ -548,7 +548,7 @@ class LaptopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Workout_1.JPG'),
                           ),
                         ),
                       ),
@@ -569,7 +569,7 @@ class LaptopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Workout_4.JPG'),
                           ),
                         ),
                       ),
@@ -592,7 +592,7 @@ class LaptopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Boxing_4.JPG'),
                           ),
                         ),
                       ),
@@ -613,7 +613,7 @@ class LaptopCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Boxing_1.JPG'),
                           ),
                         ),
                       ),
@@ -780,7 +780,7 @@ class TabletCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Yoga_2.JPG'),
                           ),
                         ),
                       ),
@@ -803,7 +803,7 @@ class TabletCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Pilates_3.JPG'),
                           ),
                         ),
                       ),
@@ -824,7 +824,7 @@ class TabletCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Pilates_2.JPG'),
                           ),
                         ),
                       ),
@@ -847,7 +847,7 @@ class TabletCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Workout_1.JPG'),
                           ),
                         ),
                       ),
@@ -868,7 +868,7 @@ class TabletCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Workout_4.JPG'),
                           ),
                         ),
                       ),
@@ -891,7 +891,7 @@ class TabletCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Boxing_1.JPG'),
                           ),
                         ),
                       ),
@@ -912,7 +912,7 @@ class TabletCoursePage extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
-                            image: AssetImage('assets/image/Yoga_1.JPG'),
+                            image: AssetImage('assets/image/Boxing_4.JPG'),
                           ),
                         ),
                       ),
@@ -1037,94 +1037,121 @@ class MobileCoursePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width / 1.5,
-                  height: MediaQuery.of(context).size.height,
-                  child: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Yoga',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 1.5,
+                  child: Column(
+                    children: <Widget>[
+                      Column(
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: const Image(
+                                image: AssetImage('assets/image/Yoga_1.JPG'),
+                              ),
+                            ),
+                          ),
+                          const Text(
+                            'Yoga',
+                            style: TextStyle(fontSize: 30, color: Colors.white),
+                          ),
+                          const Text(
+                            'Hello',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
                       ),
-                      Text(
-                        'Yogadklsflksdjfl;jsdklfjlksdjflksjlfkjslkfjslkdfjlksdjfklsjfkljsdlkfjsddlkfjsdlkdfjsdlkfjsdlkjflksdjflksdjflksj',
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      SizedBox(height: 20),
-                      Divider(
+                      const SizedBox(height: 20),
+                      const Divider(
                         height: 20,
                         thickness: 2,
-                        indent: 0,
-                        endIndent: 0,
+                        indent: 20,
+                        endIndent: 20,
                         color: Color(0xFFF9B17A),
                       ),
-                      SizedBox(height: 20),
-                      Text(
-                        'Pilates',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      const SizedBox(height: 20),
+                      Column(
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: const Image(
+                                image: AssetImage('assets/image/Pilates_3.JPG'),
+                              ),
+                            ),
+                          ),
+                          const Text(
+                            'Pilates',
+                            style: TextStyle(fontSize: 30, color: Colors.white),
+                          ),
+                          const Text(
+                            'Hello',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
                       ),
-                      Text(
-                        'Yogadklsflksdjfl;jsdklfjlksdjflksjlfkjslkfjslkdfjlksdjfklsjfkljsdlkfjsddlkfjsdlkdfjsdlkfjsdlkjflksdjflksdjflksj',
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      SizedBox(height: 20),
-                      Divider(
+                      const SizedBox(height: 20),
+                      const Divider(
                         height: 20,
                         thickness: 2,
-                        indent: 0,
-                        endIndent: 0,
+                        indent: 20,
+                        endIndent: 20,
                         color: Color(0xFFF9B17A),
                       ),
-                      SizedBox(height: 20),
-                      Text(
-                        'Workout',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      const SizedBox(height: 20),
+                      Column(
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: const Image(
+                                image: AssetImage('assets/image/Workout_1.JPG'),
+                              ),
+                            ),
+                          ),
+                          const Text(
+                            'Workout',
+                            style: TextStyle(fontSize: 30, color: Colors.white),
+                          ),
+                          const Text(
+                            'Hello',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
                       ),
-                      Text(
-                        'Yogadklsflksdjfl;jsdklfjlksdjflksjlfkjslkfjslkdfjlksdjfklsjfkljsdlkfjsddlkfjsdlkdfjsdlkfjsdlkjflksdjflksdjflksj',
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      SizedBox(height: 20),
-                      Divider(
+                      const SizedBox(height: 20),
+                      const Divider(
                         height: 20,
                         thickness: 2,
-                        indent: 0,
-                        endIndent: 0,
+                        indent: 20,
+                        endIndent: 20,
                         color: Color(0xFFF9B17A),
                       ),
-                      SizedBox(height: 20),
-                      Text(
-                        'Boxing',
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        'Yogadklsflksdjfl;jsdklfjlksdjflksjlfkjslkfjslkdfjlksdjfklsjfkljsdlkfjsddlkfjsdlkdfjsdlkfjsdlkjflksdjflksdjflksj',
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
+                      const SizedBox(height: 20),
+                      Column(
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: const Image(
+                                image: AssetImage('assets/image/Boxing_1.JPG'),
+                              ),
+                            ),
+                          ),
+                          const Text(
+                            'Boxing',
+                            style: TextStyle(fontSize: 30, color: Colors.white),
+                          ),
+                          const Text(
+                            'Hello',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),

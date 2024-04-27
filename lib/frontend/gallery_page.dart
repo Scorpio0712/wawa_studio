@@ -1209,7 +1209,7 @@ class MobileGalleryPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/image/HYoga_.JPG'),
+                        image: AssetImage('assets/image/Head_2.JPG'),
                         fit: BoxFit.cover,
                         opacity: 0.4),
                   ),
@@ -1329,8 +1329,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image:
-                                    AssetImage('assets/image/pPilWorkout_.JPG'),
+                                image: AssetImage('assets/image/Pilates_4.JPG'),
                               ),
                             )),
                       ],
@@ -1387,8 +1386,7 @@ class MobileGalleryPage extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: const Image(
-                                image:
-                                    AssetImage('assets/image/WorBoxing_.JPG'),
+                                image: AssetImage('assets/image/Workout_4.JPG'),
                               ),
                             )),
                       ],
