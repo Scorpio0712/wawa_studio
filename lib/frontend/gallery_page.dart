@@ -63,17 +63,13 @@ class DesktopGalleryPage extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 0,
-                  color: AppColor.luxuryYellow,
-                ),
+              decoration: const BoxDecoration(
                 color: AppColor.luxuryYellow,
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 75,
-                height: 75,
+                width: 125,
+                height: 100,
               ),
             ),
             Container(
@@ -88,45 +84,67 @@ class DesktopGalleryPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home');
-                      },
-                      child: const Text(
-                        'Home',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(right: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Home',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Profile',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/course');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/gallery');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.padded,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/contact');
-                      },
-                      child: const Text(
-                        'Contacts',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/contact');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Contacts',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -146,7 +164,7 @@ class DesktopGalleryPage extends StatelessWidget {
                   child: const Text(
                     'G A L L E R Y',
                     style: TextStyle(
-                        fontSize: 50,
+                        fontSize: 72,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
@@ -156,7 +174,7 @@ class DesktopGalleryPage extends StatelessWidget {
             // Grid
             const SizedBox(height: 50),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 1.5,
+              height: MediaQuery.of(context).size.height * 1.75,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
@@ -164,8 +182,9 @@ class DesktopGalleryPage extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         'Yoga',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 40, color: Colors.white),
                       ),
+                      const SizedBox(height: 20),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -221,8 +240,9 @@ class DesktopGalleryPage extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         'Pilates',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 40, color: Colors.white),
                       ),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -279,8 +299,9 @@ class DesktopGalleryPage extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         'Workout',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 40, color: Colors.white),
                       ),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -337,8 +358,9 @@ class DesktopGalleryPage extends StatelessWidget {
                     children: <Widget>[
                       const Text(
                         'Boxing',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 40, color: Colors.white),
                       ),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -620,7 +642,7 @@ class LaptopGalleryPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
                                   image:
-                                      AssetImage('assets/image/pPilates_4.JPG'),
+                                      AssetImage('assets/image/Pilates_4.JPG'),
                                 ),
                               )),
                         ],
@@ -905,7 +927,8 @@ class TabletGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/imageYoga_2.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_2.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -913,7 +936,8 @@ class TabletGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/imageYoga_3.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_3.JPG'),
                                   ),
                                 )),
                             SizedBox(
@@ -921,7 +945,8 @@ class TabletGalleryPage extends StatelessWidget {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: const Image(
-                                    image: AssetImage('assets/imageYoga_4.JPG'),
+                                    image:
+                                        AssetImage('assets/image/Yoga_4.JPG'),
                                   ),
                                 )),
                           ]),
@@ -978,8 +1003,8 @@ class TabletGalleryPage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage(
-                                      'assets/image/pPilWorkout.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_4.JPG'),
                                 ),
                               )),
                         ],

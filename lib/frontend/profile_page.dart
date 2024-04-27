@@ -70,8 +70,8 @@ class DesktopProfilePage extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 75,
-                height: 75,
+                width: 125,
+                height: 100,
               ),
             ),
             Container(
@@ -86,45 +86,67 @@ class DesktopProfilePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home');
-                      },
-                      child: const Text(
-                        'Home',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(right: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Home',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Profile',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/course');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/gallery');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.padded,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/contact');
-                      },
-                      child: const Text(
-                        'Contacts',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/contact');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Contacts',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -142,7 +164,7 @@ class DesktopProfilePage extends StatelessWidget {
               child: const Text(
                 'P R O F I L E',
                 style: TextStyle(
-                    fontSize: 50,
+                    fontSize: 72,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
@@ -175,13 +197,13 @@ class DesktopProfilePage extends StatelessWidget {
                           'Miss Kulwarynt Sitthithananrat',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 30,
                           ),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           'Owner of Wawa studio Yoga, Pilates and Workout',
-                          style: TextStyle(color: Colors.white, fontSize: 18),
+                          style: TextStyle(color: Colors.white, fontSize: 20),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -190,8 +212,8 @@ class DesktopProfilePage extends StatelessWidget {
                     Divider(
                       height: 20,
                       thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
+                      indent: 25,
+                      endIndent: 25,
                       color: Color(0xFFF9B17A),
                     ),
                     SizedBox(height: 20),
@@ -200,10 +222,11 @@ class DesktopProfilePage extends StatelessWidget {
                         Text(
                           'Certificates',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
+                            color: Colors.white,
+                            fontSize: 26,
+                          ),
                         ),
+                        SizedBox(height: 30),
                         Text(
                           '2017 - Ashtanga Yoga Training by Healthy Ning Yoga\n'
                           '2018 - TTC(Teacher Training) Yoga Training by Shivanantha Thailand\n'
@@ -220,7 +243,7 @@ class DesktopProfilePage extends StatelessWidget {
                           '2023 - Rehab Exercise Pilates Course (Based on movement subsystem) and DNS Exercise (Suitable for patients with Ortho and Neuro Parkinson Diseases)',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 20,
                           ),
                         )
                       ],

@@ -72,8 +72,8 @@ class DesktopCoursePage extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 75,
-                height: 75,
+                width: 125,
+                height: 100,
               ),
             ),
             Container(
@@ -88,45 +88,67 @@ class DesktopCoursePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home');
-                      },
-                      child: const Text(
-                        'Home',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(right: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Home',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Profile',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/course');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/gallery');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.padded,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/contact');
-                      },
-                      child: const Text(
-                        'Contacts',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/contact');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Contacts',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -144,7 +166,7 @@ class DesktopCoursePage extends StatelessWidget {
               child: const Text(
                 'C O U R S E S',
                 style: TextStyle(
-                    fontSize: 50,
+                    fontSize: 72,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
@@ -159,7 +181,7 @@ class DesktopCoursePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 5,
+                        width: MediaQuery.of(context).size.width / 4.5,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
@@ -180,7 +202,7 @@ class DesktopCoursePage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 5,
+                        width: MediaQuery.of(context).size.width / 4.5,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
@@ -194,8 +216,8 @@ class DesktopCoursePage extends StatelessWidget {
                   const Divider(
                     height: 20,
                     thickness: 2,
-                    indent: 20,
-                    endIndent: 20,
+                    indent: 50,
+                    endIndent: 50,
                     color: Color(0xFFF9B17A),
                   ),
                   const SizedBox(height: 20),
@@ -203,7 +225,7 @@ class DesktopCoursePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 5,
+                        width: MediaQuery.of(context).size.width / 4.5,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
@@ -224,7 +246,7 @@ class DesktopCoursePage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 5,
+                        width: MediaQuery.of(context).size.width / 4.5,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
@@ -238,8 +260,8 @@ class DesktopCoursePage extends StatelessWidget {
                   const Divider(
                     height: 20,
                     thickness: 2,
-                    indent: 20,
-                    endIndent: 20,
+                    indent: 50,
+                    endIndent: 50,
                     color: Color(0xFFF9B17A),
                   ),
                   const SizedBox(height: 20),
@@ -247,7 +269,7 @@ class DesktopCoursePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 5,
+                        width: MediaQuery.of(context).size.width / 4.5,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
@@ -268,7 +290,7 @@ class DesktopCoursePage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 5,
+                        width: MediaQuery.of(context).size.width / 4.5,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
@@ -282,8 +304,8 @@ class DesktopCoursePage extends StatelessWidget {
                   const Divider(
                     height: 20,
                     thickness: 2,
-                    indent: 20,
-                    endIndent: 20,
+                    indent: 50,
+                    endIndent: 50,
                     color: Color(0xFFF9B17A),
                   ),
                   const SizedBox(height: 20),
@@ -291,7 +313,7 @@ class DesktopCoursePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 5,
+                        width: MediaQuery.of(context).size.width / 4.5,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
@@ -312,7 +334,7 @@ class DesktopCoursePage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 5,
+                        width: MediaQuery.of(context).size.width / 4.5,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(

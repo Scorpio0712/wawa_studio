@@ -85,17 +85,13 @@ class DesktopHomePage extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 0,
-                  color: AppColor.luxuryYellow,
-                ),
+              decoration: const BoxDecoration(
                 color: AppColor.luxuryYellow,
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 75,
-                height: 75,
+                width: 125,
+                height: 100,
               ),
             ),
             Container(
@@ -112,42 +108,62 @@ class DesktopHomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, '/home');
                     },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(right: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
                     child: const Text(
                       'Home',
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Profile',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/course');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/gallery');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.padded,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/contact');
                     },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
                     child: const Text(
                       'Contacts',
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                 ],
@@ -170,40 +186,52 @@ class DesktopHomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Wawa Studio Yoga\nPilates, and workout',
+                        'Wawa Studio Yoga,\nPilates, and workout',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 35),
+                            fontSize: 50),
                       ),
                       Row(
                         children: [
-                          TextButton.icon(
-                            onPressed: () {},
-                            style: TextButton.styleFrom(
-                              backgroundColor: Colors.red,
-                              foregroundColor: Colors.white,
-                              textStyle: const TextStyle(fontSize: 20),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5)),
+                          SizedBox(
+                            width: 150,
+                            height: 40,
+                            child: TextButton.icon(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/profile');
+                              },
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.red,
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 24),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                              ),
+                              icon: const Icon(Icons.person),
+                              label: const Text('Profile'),
                             ),
-                            icon: const Icon(Icons.person),
-                            label: const Text('Profile'),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
-                          TextButton.icon(
-                            onPressed: () {},
-                            style: TextButton.styleFrom(
-                              backgroundColor: Colors.green,
-                              foregroundColor: Colors.white,
-                              textStyle: const TextStyle(fontSize: 20),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5)),
+                          SizedBox(
+                            width: 150,
+                            height: 40,
+                            child: TextButton.icon(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/contact');
+                              },
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.green,
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 24),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                              ),
+                              icon: const Icon(Icons.call),
+                              label: const Text('Contact'),
                             ),
-                            icon: const Icon(Icons.call),
-                            label: const Text('Contact'),
                           )
                         ],
                       )
@@ -243,12 +271,13 @@ class DesktopHomePage extends StatelessWidget {
                         children: <Widget>[
                           const Text(
                             'Founder',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 40, color: Colors.white),
                           ),
                           const Text(
                             'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
+                          const SizedBox(height: 10),
                           ElevatedButton.icon(
                             onPressed: () {
                               Navigator.pushNamed(context, '/profile');
@@ -277,14 +306,23 @@ class DesktopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/Home_Founder.JPG'),
+                                  image: AssetImage(
+                                      'assets/image/Home_Founder.JPG'),
                                 ),
                               ))
                         ],
                       ),
                     ],
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 50),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 150,
+                    endIndent: 150,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -296,7 +334,8 @@ class DesktopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/Pilates_5.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_5.JPG'),
                                 ),
                               ))
                         ],
@@ -305,12 +344,13 @@ class DesktopHomePage extends StatelessWidget {
                         children: [
                           const Text(
                             'Courses',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 40, color: Colors.white),
                           ),
                           const Text(
                             'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
+                          const SizedBox(height: 10),
                           ElevatedButton.icon(
                             onPressed: () {
                               Navigator.pushNamed(context, '/course');
@@ -334,7 +374,15 @@ class DesktopHomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 50),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 150,
+                    endIndent: 150,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -343,12 +391,13 @@ class DesktopHomePage extends StatelessWidget {
                         children: <Widget>[
                           const Text(
                             'Gallery',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 40, color: Colors.white),
                           ),
                           const Text(
                             'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
+                          const SizedBox(height: 10),
                           ElevatedButton.icon(
                             onPressed: () {
                               Navigator.pushNamed(context, '/gallery');
@@ -364,7 +413,7 @@ class DesktopHomePage extends StatelessWidget {
                               size: 20,
                             ),
                             label: const Text(
-                              'สนใจติดต่อ',
+                              'Contact',
                               style: TextStyle(fontSize: 20),
                             ),
                           ),
@@ -377,7 +426,8 @@ class DesktopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/Workout_3.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_3.JPG'),
                                 ),
                               ))
                         ],
@@ -621,14 +671,23 @@ class LaptopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/Home_Founder.JPG'),
+                                  image: AssetImage(
+                                      'assets/image/Home_Founder.JPG'),
                                 ),
                               ))
                         ],
                       ),
                     ],
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 50),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -640,7 +699,8 @@ class LaptopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/Pilates_5.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_5.JPG'),
                                 ),
                               ))
                         ],
@@ -659,7 +719,15 @@ class LaptopHomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 50),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -683,7 +751,8 @@ class LaptopHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/Workout_3.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_3.JPG'),
                                 ),
                               ))
                         ],
@@ -868,7 +937,9 @@ class TabletHomePage extends StatelessWidget {
                             width: 10,
                           ),
                           TextButton.icon(
-                            onPressed: () {Navigator.pushNamed(context, '/contact');},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/contact');
+                            },
                             style: TextButton.styleFrom(
                               backgroundColor: Colors.green,
                               foregroundColor: Colors.white,
@@ -953,14 +1024,23 @@ class TabletHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/Home_Founder.JPG'),
+                                  image: AssetImage(
+                                      'assets/image/Home_Founder.JPG'),
                                 ),
                               ))
                         ],
                       ),
                     ],
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 50),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -972,7 +1052,8 @@ class TabletHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/Pilates_5.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Pilates_5.JPG'),
                                 ),
                               ))
                         ],
@@ -1011,7 +1092,15 @@ class TabletHomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 50),
+                  const Divider(
+                    height: 20,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 20,
+                    color: Color(0xFFF9B17A),
+                  ),
+                  const SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -1055,7 +1144,8 @@ class TabletHomePage extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
-                                  image: AssetImage('assets/image/Workout_3.JPG'),
+                                  image:
+                                      AssetImage('assets/image/Workout_3.JPG'),
                                 ),
                               ))
                         ],

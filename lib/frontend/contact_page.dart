@@ -65,17 +65,13 @@ class DesktopContactPage extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 0,
-                  color: AppColor.luxuryYellow,
-                ),
+              decoration: const BoxDecoration(
                 color: AppColor.luxuryYellow,
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 75,
-                height: 75,
+                width: 125,
+                height: 100,
               ),
             ),
             Container(
@@ -90,45 +86,67 @@ class DesktopContactPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home');
-                      },
-                      child: const Text(
-                        'Home',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(right: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Home',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Profile',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/course');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/gallery');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 25, right: 25),
+                          tapTargetSize: MaterialTapTargetSize.padded,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/contact');
-                      },
-                      child: const Text(
-                        'Contacts',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/contact');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 25),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Contacts',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -146,27 +164,17 @@ class DesktopContactPage extends StatelessWidget {
               child: const Text(
                 'C O N T A C T S',
                 style: TextStyle(
-                    fontSize: 50,
+                    fontSize: 72,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 50),
             SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
-                  const Text(
-                    'Contact Information',
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
@@ -178,18 +186,18 @@ class DesktopContactPage extends StatelessWidget {
                             const Text(
                               'Wawa Studio Yoga,',
                               style:
-                                  TextStyle(fontSize: 26, color: Colors.white),
+                                  TextStyle(fontSize: 36, color: Colors.white),
                             ),
                             const Text(
                               'Pilates, and Workout',
                               style:
-                                  TextStyle(fontSize: 26, color: Colors.white),
+                                  TextStyle(fontSize: 36, color: Colors.white),
                             ),
                             const SizedBox(height: 10),
                             const Text(
                               'Phone: +66 63-474-6519',
                               style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
+                                  TextStyle(fontSize: 30, color: Colors.white),
                             ),
                             TextButton.icon(
                               onPressed: () async {
@@ -203,26 +211,26 @@ class DesktopContactPage extends StatelessWidget {
                               },
                               style: TextButton.styleFrom(
                                 foregroundColor: Colors.white,
-                                textStyle: const TextStyle(fontSize: 20),
+                                textStyle: const TextStyle(fontSize: 30),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                               ),
                               icon: const FaIcon(
                                 FontAwesomeIcons.squareFacebook,
                                 color: Colors.blue,
-                                size: 20,
+                                size: 40,
                               ),
                               label: const Text('Wawastudio yoga and workout'),
                             ),
                             const Text(
                               'Whatsapp:',
                               style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
+                                  TextStyle(fontSize: 30, color: Colors.white),
                             ),
                             const Text(
                               'Line: ',
                               style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
+                                  TextStyle(fontSize: 30, color: Colors.white),
                             ),
                           ],
                         ),
@@ -235,8 +243,9 @@ class DesktopContactPage extends StatelessWidget {
                             const Text(
                               'Map',
                               style:
-                                  TextStyle(fontSize: 26, color: Colors.white),
+                                  TextStyle(fontSize: 36, color: Colors.white),
                             ),
+                            const SizedBox(height: 10),
                             TextButton.icon(
                               onPressed: () async {
                                 var urlGM = Uri.parse(
@@ -249,17 +258,19 @@ class DesktopContactPage extends StatelessWidget {
                               },
                               style: TextButton.styleFrom(
                                 foregroundColor: Colors.white,
-                                textStyle: const TextStyle(fontSize: 20),
+                                textStyle: const TextStyle(fontSize: 30),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                               ),
                               icon: const FaIcon(
                                 FontAwesomeIcons.mapLocationDot,
                                 color: Colors.blue,
-                                size: 20,
+                                size: 40,
                               ),
                               label: const Text(
-                                  '13 ภูเก็ต บ้านเลขที่ 25 Ko Kaeo, \nMueang Phuket District, Phuket 83000'),
+                                '25 Ko Kaeo, Mueang \nPhuket District, Phuket 83000',
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ],
                         ),
@@ -269,8 +280,8 @@ class DesktopContactPage extends StatelessWidget {
                   const SizedBox(height: 20),
                   Container(
                     alignment: Alignment.center,
-                    height: MediaQuery.of(context).size.height / 2,
-                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height / 1.5,
+                    width: MediaQuery.of(context).size.width * 0.8,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage('assets/image/studio_image.png'),
