@@ -109,7 +109,7 @@ class DesktopHomePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/home');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(right: 25),
+                        padding: const EdgeInsets.only(left: 25, right: 25),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -158,7 +158,7 @@ class DesktopHomePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/contact');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(left: 25),
+                        padding: const EdgeInsets.only(left: 25, right: 25),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -522,7 +522,7 @@ class LaptopHomePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/home');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.only(left: 20, right: 20),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -571,7 +571,7 @@ class LaptopHomePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/contact');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(left: 20),
+                        padding: const EdgeInsets.only(left: 20, right: 20),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -907,16 +907,12 @@ class TabletHomePage extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 0,
-                  color: AppColor.luxuryYellow,
-                ),
+              decoration: const BoxDecoration(
                 color: AppColor.luxuryYellow,
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 75,
+                width: 100,
                 height: 75,
               ),
             ),
@@ -931,44 +927,65 @@ class TabletHomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home');
-                      },
-                      child: const Text(
-                        'Home',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Home',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Profile',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/course');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/gallery');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.padded,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/contact');
                     },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
                     child: const Text(
                       'Contacts',
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                 ],
@@ -995,48 +1012,56 @@ class TabletHomePage extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 35),
+                            fontSize: 40),
                       ),
                       const Text(
                         'Pilates and workout',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 35),
+                            fontSize: 40),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          TextButton.icon(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/profile');
-                            },
-                            style: TextButton.styleFrom(
-                              backgroundColor: Colors.red,
-                              foregroundColor: Colors.white,
-                              textStyle: const TextStyle(fontSize: 20),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5)),
+                          SizedBox(
+                            width: 150,
+                            height: 40,
+                            child: TextButton.icon(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/profile');
+                              },
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.red,
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 26),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7)),
+                              ),
+                              icon: const Icon(Icons.person),
+                              label: const Text('Profile'),
                             ),
-                            icon: const Icon(Icons.person),
-                            label: const Text('Profile'),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
-                          TextButton.icon(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/contact');
-                            },
-                            style: TextButton.styleFrom(
-                              backgroundColor: Colors.green,
-                              foregroundColor: Colors.white,
-                              textStyle: const TextStyle(fontSize: 20),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5)),
+                          SizedBox(
+                            width: 150,
+                            height: 40,
+                            child: TextButton.icon(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/contact');
+                              },
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.green,
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 26),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7)),
+                              ),
+                              icon: const Icon(Icons.call),
+                              label: const Text('Contact'),
                             ),
-                            icon: const Icon(Icons.call),
-                            label: const Text('Contact'),
                           )
                         ],
                       )
@@ -1065,7 +1090,7 @@ class TabletHomePage extends StatelessWidget {
             ),
             const SizedBox(height: 150),
             SizedBox(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height * 0.85,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
@@ -1077,7 +1102,7 @@ class TabletHomePage extends StatelessWidget {
                         children: <Widget>[
                           const Text(
                             'Founder',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 26, color: Colors.white),
                           ),
                           const Text(
                             'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
@@ -1124,8 +1149,8 @@ class TabletHomePage extends StatelessWidget {
                   const Divider(
                     height: 20,
                     thickness: 2,
-                    indent: 20,
-                    endIndent: 20,
+                    indent: 30,
+                    endIndent: 30,
                     color: Color(0xFFF9B17A),
                   ),
                   const SizedBox(height: 50),
@@ -1150,7 +1175,7 @@ class TabletHomePage extends StatelessWidget {
                         children: [
                           const Text(
                             'Courses',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 26, color: Colors.white),
                           ),
                           const Text(
                             'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
@@ -1184,8 +1209,8 @@ class TabletHomePage extends StatelessWidget {
                   const Divider(
                     height: 20,
                     thickness: 2,
-                    indent: 20,
-                    endIndent: 20,
+                    indent: 30,
+                    endIndent: 30,
                     color: Color(0xFFF9B17A),
                   ),
                   const SizedBox(height: 50),
@@ -1197,7 +1222,7 @@ class TabletHomePage extends StatelessWidget {
                         children: <Widget>[
                           const Text(
                             'Gallery',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 26, color: Colors.white),
                           ),
                           const Text(
                             'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
@@ -1323,31 +1348,31 @@ class MobileHomePage extends StatelessWidget {
                               onTap: () {
                                 Navigator.pushNamed(context, '/home');
                               },
-                              child: const Text('Home'),
+                              child: const Text('Home' ,style: TextStyle(color: AppColor.luxuryRed),),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/profile');
                               },
-                              child: const Text('Profile'),
+                              child: const Text('Profile' ,style: TextStyle(color: AppColor.luxuryRed),),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/course');
                               },
-                              child: const Text('Courses'),
+                              child: const Text('Courses' ,style: TextStyle(color: AppColor.luxuryRed),),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/gallery');
                               },
-                              child: const Text('Gallery'),
+                              child: const Text('Gallery' ,style: TextStyle(color: AppColor.luxuryRed),),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/contact');
                               },
-                              child: const Text('Contact'),
+                              child: const Text('Contact' ,style: TextStyle(color: AppColor.luxuryRed),),
                             ),
                           ])
                 ],
@@ -1459,11 +1484,11 @@ class MobileHomePage extends StatelessWidget {
                     children: [
                       const Text(
                         'Founder',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 24, color: Colors.white),
                       ),
                       const SizedBox(height: 20),
                       SizedBox(
-                        width: 350,
+                        width: MediaQuery.of(context).size.width / 1.5,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: const Image(
@@ -1512,11 +1537,11 @@ class MobileHomePage extends StatelessWidget {
                     children: [
                       const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 24, color: Colors.white),
                       ),
                       const SizedBox(height: 20),
                       SizedBox(
-                          width: 350,
+                          width: MediaQuery.of(context).size.width / 1.5,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: const Image(
@@ -1564,11 +1589,11 @@ class MobileHomePage extends StatelessWidget {
                     children: [
                       const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 24, color: Colors.white),
                       ),
                       const SizedBox(height: 20),
                       SizedBox(
-                          width: 350,
+                          width: MediaQuery.of(context).size.width / 1.5,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: const Image(

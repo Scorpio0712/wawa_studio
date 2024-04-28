@@ -90,7 +90,7 @@ class DesktopProfilePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/home');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(right: 25),
+                        padding: const EdgeInsets.only(left: 25, right: 25),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -139,7 +139,7 @@ class DesktopProfilePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/contact');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(left: 25),
+                        padding: const EdgeInsets.only(left: 25, right: 25),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -314,7 +314,7 @@ class LaptopProfilePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/home');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.only(left: 20, right: 20),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -363,7 +363,7 @@ class LaptopProfilePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/contact');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(left: 20),
+                        padding: const EdgeInsets.only(left: 20, right: 20),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -524,7 +524,7 @@ class TabletProfilePage extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 75,
+                width: 100,
                 height: 75,
               ),
             ),
@@ -540,45 +540,67 @@ class TabletProfilePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home');
-                      },
-                      child: const Text(
-                        'Home',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Home',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Profile',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/course');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/gallery');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.padded,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/contact');
-                      },
-                      child: const Text(
-                        'Contacts',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/contact');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Contacts',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -591,7 +613,7 @@ class TabletProfilePage extends StatelessWidget {
                 image: DecorationImage(
                     image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
-                    opacity: 0.4),
+                    opacity: 0.3),
               ),
               child: const Text(
                 'P R O F I L E',
@@ -607,8 +629,8 @@ class TabletProfilePage extends StatelessWidget {
             Column(
               children: <Widget>[
                 Container(
-                  height: 225,
-                  width: 225,
+                  height: 200,
+                  width: 200,
                   decoration: BoxDecoration(
                       border: Border.all(style: BorderStyle.none),
                       shape: BoxShape.circle,
@@ -621,61 +643,64 @@ class TabletProfilePage extends StatelessWidget {
                 const SizedBox(height: 20),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.9,
-                  child: const Column(children: <Widget>[
-                    Column(
+                  child: Column(children: <Widget>[
+                    const Column(
                       mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
                         Text(
                           'Miss Kulwarynt Sitthithananrat',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 28,
                           ),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           'Owner of Wawa studio Yoga, Pilates and Workout',
-                          style: TextStyle(color: Colors.white, fontSize: 18),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                           textAlign: TextAlign.center,
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
-                    Divider(
+                    const SizedBox(height: 20),
+                    const Divider(
                       height: 20,
                       thickness: 2,
                       indent: 20,
                       endIndent: 20,
                       color: Color(0xFFF9B17A),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Column(
                       children: <Widget>[
-                        Text(
+                        const Text(
                           'Certificates',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          '2017 - Ashtanga Yoga Training by Healthy Ning Yoga\n'
-                          '2018 - TTC(Teacher Training) Yoga Training by Shivanantha Thailand\n'
-                          '2019 - Hatha Vinyasa (Anusara) Yoga training by Healthy Ning Yoga\n'
-                          '2019 - Anatomy and Fascia (Anatomy Course at Mahidol University)\n'
-                          '2019 - Fusion Exercise by Mister Wannarat(Yai) Yaiyong, Physical Therapist\n'
-                          '2020 - SCO PHK (Scoliosis Beginner Exercise)\n'
-                          '2020 - Function system Exercise by Mister Wannarat(Yai) Yaiyong, Physical Therapist\n'
-                          '2021 - Correction Muscle Imbalance Training by\n'
-                          '2021 - 3D Breathing Training (Breathewith the correct movement of core muscle and diaphragm)\n'
-                          '2022 - Posture Connection Course at Huachiew Chalermprakiet University\n'
-                          '2022 - Sport Massage for Upper and Lower body parts at Fixme Medical and Physiotherapy Clinic\n'
-                          '2022 - PESA Personal Trainer Course\n'
-                          '2023 - Rehab Exercise Pilates Course (Based on movement subsystem) and DNS Exercise (Suitable for patients with Ortho and Neuro Parkinson Diseases)',
-                          style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 28,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width / 1.25,
+                          child: const Text(
+                            '2017 - Ashtanga Yoga Training by Healthy Ning Yoga\n'
+                            '2018 - TTC(Teacher Training) Yoga Training by Shivanantha Thailand\n'
+                            '2019 - Hatha Vinyasa (Anusara) Yoga training by Healthy Ning Yoga\n'
+                            '2019 - Anatomy and Fascia (Anatomy Course at Mahidol University)\n'
+                            '2019 - Fusion Exercise by Mister Wannarat(Yai) Yaiyong, Physical Therapist\n'
+                            '2020 - SCO PHK (Scoliosis Beginner Exercise)\n'
+                            '2020 - Function system Exercise by Mister Wannarat(Yai) Yaiyong, Physical Therapist\n'
+                            '2021 - Correction Muscle Imbalance Training by\n'
+                            '2021 - 3D Breathing Training (Breathewith the correct movement of core muscle and diaphragm)\n'
+                            '2022 - Posture Connection Course at Huachiew Chalermprakiet University\n'
+                            '2022 - Sport Massage for Upper and Lower body parts at Fixme Medical and Physiotherapy Clinic\n'
+                            '2022 - PESA Personal Trainer Course\n'
+                            '2023 - Rehab Exercise Pilates Course (Based on movement subsystem) and DNS Exercise (Suitable for patients with Ortho and Neuro Parkinson Diseases)',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
                           ),
                         )
                       ],
@@ -737,40 +762,56 @@ class MobileProfilePage extends StatelessWidget {
                     height: 50,
                   ),
                   PopupMenuButton(
-                      icon: const Icon(Icons.menu),
-                      color: AppColor.luxuryYellow,
-                      itemBuilder: (context) => [
-                            PopupMenuItem(
-                              onTap: () {
-                                Navigator.pushNamed(context, '/home');
-                              },
-                              child: const Text('Home'),
-                            ),
-                            PopupMenuItem(
-                              onTap: () {
-                                Navigator.pushNamed(context, '/profile');
-                              },
-                              child: const Text('Profile'),
-                            ),
-                            PopupMenuItem(
-                              onTap: () {
-                                Navigator.pushNamed(context, '/course');
-                              },
-                              child: const Text('Courses'),
-                            ),
-                            PopupMenuItem(
-                              onTap: () {
-                                Navigator.pushNamed(context, '/gallery');
-                              },
-                              child: const Text('Gallery'),
-                            ),
-                            PopupMenuItem(
-                              onTap: () {
-                                Navigator.pushNamed(context, '/contact');
-                              },
-                              child: const Text('Contact'),
-                            ),
-                          ])
+                    icon: const Icon(Icons.menu),
+                    color: AppColor.luxuryYellow,
+                    itemBuilder: (context) => [
+                      PopupMenuItem(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
+                        child: const Text(
+                          'Home',
+                          style: TextStyle(color: AppColor.luxuryRed),
+                        ),
+                      ),
+                      PopupMenuItem(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/profile');
+                        },
+                        child: const Text(
+                          'Profile',
+                          style: TextStyle(color: AppColor.luxuryRed),
+                        ),
+                      ),
+                      PopupMenuItem(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/course');
+                        },
+                        child: const Text(
+                          'Courses',
+                          style: TextStyle(color: AppColor.luxuryRed),
+                        ),
+                      ),
+                      PopupMenuItem(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/gallery');
+                        },
+                        child: const Text(
+                          'Gallery',
+                          style: TextStyle(color: AppColor.luxuryRed),
+                        ),
+                      ),
+                      PopupMenuItem(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/contact');
+                        },
+                        child: const Text(
+                          'Contact',
+                          style: TextStyle(color: AppColor.luxuryRed),
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
@@ -787,7 +828,7 @@ class MobileProfilePage extends StatelessWidget {
                         image: DecorationImage(
                             image: AssetImage('assets/image/Head_2.JPG'),
                             fit: BoxFit.cover,
-                            opacity: 0.4),
+                            opacity: 0.3),
                       ),
                       child: const Text(
                         'P R O F I L E',
@@ -801,8 +842,8 @@ class MobileProfilePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 50),
                 Container(
-                  height: 225,
-                  width: 225,
+                  height: 175,
+                  width: 175,
                   decoration: BoxDecoration(
                       border: Border.all(style: BorderStyle.none),
                       shape: BoxShape.circle,
@@ -815,8 +856,8 @@ class MobileProfilePage extends StatelessWidget {
                 const SizedBox(height: 20),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.9,
-                  child: const Column(children: <Widget>[
-                    Column(
+                  child: Column(children: <Widget>[
+                    const Column(
                       mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
                         Text(
@@ -824,52 +865,54 @@ class MobileProfilePage extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
-                            fontWeight: FontWeight.bold,
                           ),
                           textAlign: TextAlign.center,
                         ),
                         Text(
-                          'Owner of Wawa studio Yoga, Pilates and Workout',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
+                          'Owner of Wawa studio Yoga, Pilates, and Workout',
+                          style: TextStyle(color: Colors.white, fontSize: 14),
                           textAlign: TextAlign.center,
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
-                    Divider(
+                    const SizedBox(height: 20),
+                    const Divider(
                       height: 20,
                       thickness: 2,
                       indent: 20,
                       endIndent: 20,
                       color: Color(0xFFF9B17A),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Column(
                       children: <Widget>[
-                        Text(
+                        const Text(
                           'Certificates',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          '2017 - Ashtanga Yoga Training by Healthy Ning Yoga\n'
-                          '2018 - TTC(Teacher Training) Yoga Training by Shivanantha Thailand\n'
-                          '2019 - Hatha Vinyasa (Anusara) Yoga training by Healthy Ning Yoga\n'
-                          '2019 - Anatomy and Fascia (Anatomy Course at Mahidol University)\n'
-                          '2019 - Fusion Exercise by Mister Wannarat(Yai) Yaiyong, Physical Therapist\n'
-                          '2020 - SCO PHK (Scoliosis Beginner Exercise)\n'
-                          '2020 - Function system Exercise by Mister Wannarat(Yai) Yaiyong, Physical Therapist\n'
-                          '2021 - Correction Muscle Imbalance Training by\n'
-                          '2021 - 3D Breathing Training (Breathewith the correct movement of core muscle and diaphragm)\n'
-                          '2022 - Posture Connection Course at Huachiew Chalermprakiet University\n'
-                          '2022 - Sport Massage for Upper and Lower body parts at Fixme Medical and Physiotherapy Clinic\n'
-                          '2022 - PESA Personal Trainer Course\n'
-                          '2023 - Rehab Exercise Pilates Course (Based on movement subsystem) and DNS Exercise (Suitable for patients with Ortho and Neuro Parkinson Diseases)',
-                          style: TextStyle(
                             color: Colors.white,
-                            fontSize: 14,
+                            fontSize: 20,
+                          ),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width / 1.25,
+                          child: const Text(
+                            '2017 - Ashtanga Yoga Training by Healthy Ning Yoga\n'
+                            '2018 - TTC(Teacher Training) Yoga Training by Shivanantha Thailand\n'
+                            '2019 - Hatha Vinyasa (Anusara) Yoga training by Healthy Ning Yoga\n'
+                            '2019 - Anatomy and Fascia (Anatomy Course at Mahidol University)\n'
+                            '2019 - Fusion Exercise by Mister Wannarat(Yai) Yaiyong, Physical Therapist\n'
+                            '2020 - SCO PHK (Scoliosis Beginner Exercise)\n'
+                            '2020 - Function system Exercise by Mister Wannarat(Yai) Yaiyong, Physical Therapist\n'
+                            '2021 - Correction Muscle Imbalance Training by\n'
+                            '2021 - 3D Breathing Training (Breathewith the correct movement of core muscle and diaphragm)\n'
+                            '2022 - Posture Connection Course at Huachiew Chalermprakiet University\n'
+                            '2022 - Sport Massage for Upper and Lower body parts at Fixme Medical and Physiotherapy Clinic\n'
+                            '2022 - PESA Personal Trainer Course\n'
+                            '2023 - Rehab Exercise Pilates Course (Based on movement subsystem) and DNS Exercise (Suitable for patients with Ortho and Neuro Parkinson Diseases)',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
                           ),
                         )
                       ],

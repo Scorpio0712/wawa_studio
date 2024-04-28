@@ -92,7 +92,7 @@ class DesktopCoursePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/home');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(right: 25),
+                        padding: const EdgeInsets.only(left: 25, right: 25),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -141,7 +141,7 @@ class DesktopCoursePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/contact');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(left: 25),
+                        padding: const EdgeInsets.only(left: 25, right: 25),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -412,7 +412,7 @@ class LaptopCoursePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/home');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.only(left: 20, right: 20),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -461,7 +461,7 @@ class LaptopCoursePage extends StatelessWidget {
                       Navigator.pushNamed(context, '/contact');
                     },
                     style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(left: 20),
+                        padding: const EdgeInsets.only(left: 20, right: 20),
                         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         alignment: Alignment.centerLeft),
                     child: const Text(
@@ -713,7 +713,7 @@ class TabletCoursePage extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 75,
+                width: 100,
                 height: 75,
               ),
             ),
@@ -729,45 +729,67 @@ class TabletCoursePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/home');
-                      },
-                      child: const Text(
-                        'Home',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Home',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Profile',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/course');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/gallery');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.padded,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 20),
                       )),
                   TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/contact');
-                      },
-                      child: const Text(
-                        'Contacts',
-                        style: TextStyle(fontSize: 16),
-                      )),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/contact');
+                    },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
+                    child: const Text(
+                      'Contacts',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -780,7 +802,7 @@ class TabletCoursePage extends StatelessWidget {
                 image: DecorationImage(
                     image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
-                    opacity: 0.4),
+                    opacity: 0.3),
               ),
               child: const Text(
                 'C O U R S E S',
@@ -790,7 +812,7 @@ class TabletCoursePage extends StatelessWidget {
                     color: Colors.white),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 50),
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
@@ -1025,31 +1047,46 @@ class MobileCoursePage extends StatelessWidget {
                               onTap: () {
                                 Navigator.pushNamed(context, '/home');
                               },
-                              child: const Text('Home'),
+                              child: const Text(
+                                'Home',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/profile');
                               },
-                              child: const Text('Profile'),
+                              child: const Text(
+                                'Profile',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/course');
                               },
-                              child: const Text('Courses'),
+                              child: const Text(
+                                'Courses',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/gallery');
                               },
-                              child: const Text('Gallery'),
+                              child: const Text(
+                                'Gallery',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/contact');
                               },
-                              child: const Text('Contact'),
+                              child: const Text(
+                                'Contact',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                           ])
                 ],
@@ -1068,7 +1105,7 @@ class MobileCoursePage extends StatelessWidget {
                         image: DecorationImage(
                             image: AssetImage('assets/image/Head_2.JPG'),
                             fit: BoxFit.cover,
-                            opacity: 0.4),
+                            opacity: 0.3),
                       ),
                       child: const Text(
                         'C O U R S E S',
