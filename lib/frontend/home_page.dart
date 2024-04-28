@@ -302,7 +302,7 @@ class DesktopHomePage extends StatelessWidget {
                       Column(
                         children: [
                           SizedBox(
-                              width: 400,
+                              width: MediaQuery.of(context).size.width,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -330,7 +330,7 @@ class DesktopHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           SizedBox(
-                              width: 400,
+                              width: MediaQuery.of(context).size.width,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -422,7 +422,7 @@ class DesktopHomePage extends StatelessWidget {
                       Column(
                         children: [
                           SizedBox(
-                              width: 400,
+                              width: MediaQuery.of(context).size.width,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -503,7 +503,7 @@ class LaptopHomePage extends StatelessWidget {
               ),
               child: const Image(
                 image: AssetImage('assets/image/wawalogo.png'),
-                width: 75,
+                width: 100,
                 height: 75,
               ),
             ),
@@ -521,42 +521,62 @@ class LaptopHomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, '/home');
                     },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(right: 20),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
                     child: const Text(
                       'Home',
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(fontSize: 18),
                     ),
                   ),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Profile',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 18),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/course');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Courses',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 18),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/gallery');
                       },
+                      style: TextButton.styleFrom(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          tapTargetSize: MaterialTapTargetSize.padded,
+                          alignment: Alignment.centerLeft),
                       child: const Text(
                         'Gallery',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 18),
                       )),
                   TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/contact');
                     },
+                    style: TextButton.styleFrom(
+                        padding: const EdgeInsets.only(left: 20),
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        alignment: Alignment.centerLeft),
                     child: const Text(
                       'Contacts',
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(fontSize: 18),
                     ),
                   ),
                 ],
@@ -579,7 +599,7 @@ class LaptopHomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Wawa Studio Yoga\nPilates, and workout',
+                        'Wawa Studio Yoga,\nPilates, and workout',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -587,36 +607,44 @@ class LaptopHomePage extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          TextButton.icon(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/profile');
-                            },
-                            style: TextButton.styleFrom(
-                              backgroundColor: Colors.red,
-                              foregroundColor: Colors.white,
-                              textStyle: const TextStyle(fontSize: 16),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5)),
+                          SizedBox(
+                            width: 120,
+                            height: 30,
+                            child: TextButton.icon(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/profile');
+                              },
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.red,
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 20),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7)),
+                              ),
+                              icon: const Icon(Icons.person),
+                              label: const Text('Profile'),
                             ),
-                            icon: const Icon(Icons.person),
-                            label: const Text('Profile'),
                           ),
                           const SizedBox(
                             width: 10,
                           ),
-                          TextButton.icon(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/contact');
-                            },
-                            style: TextButton.styleFrom(
-                              backgroundColor: Colors.green,
-                              foregroundColor: Colors.white,
-                              textStyle: const TextStyle(fontSize: 16),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5)),
+                          SizedBox(
+                            width: 130,
+                            height: 30,
+                            child: TextButton.icon(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/contact');
+                              },
+                              style: TextButton.styleFrom(
+                                backgroundColor: Colors.green,
+                                foregroundColor: Colors.white,
+                                textStyle: const TextStyle(fontSize: 20),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7)),
+                              ),
+                              icon: const Icon(Icons.call),
+                              label: const Text('Contact'),
                             ),
-                            icon: const Icon(Icons.call),
-                            label: const Text('Contact'),
                           )
                         ],
                       )
@@ -625,8 +653,8 @@ class LaptopHomePage extends StatelessWidget {
                   Stack(
                     children: [
                       SizedBox(
-                        height: MediaQuery.of(context).size.height / 3,
-                        width: MediaQuery.of(context).size.width / 3,
+                        height: MediaQuery.of(context).size.height / 2,
+                        width: MediaQuery.of(context).size.width / 2.5,
                         child: CarouselSlider(
                           items: generateImagesTiles(),
                           options: CarouselOptions(
@@ -642,32 +670,52 @@ class LaptopHomePage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 150),
+            const SizedBox(height: 100),
             SizedBox(
-              height: 1250,
+              height: MediaQuery.of(context).size.height * 1.5,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Column(
+                      Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          Text(
+                          const Text(
                             'Founder',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
-                          Text(
+                          const Text(
                             'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const SizedBox(height: 10),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/profile');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'Profile',
+                              style: TextStyle(fontSize: 20),
+                            ),
                           ),
                         ],
                       ),
                       Column(
                         children: [
                           SizedBox(
-                              width: 400,
+                              width: MediaQuery.of(context).size.width / 4.25,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -683,8 +731,8 @@ class LaptopHomePage extends StatelessWidget {
                   const Divider(
                     height: 20,
                     thickness: 2,
-                    indent: 20,
-                    endIndent: 20,
+                    indent: 100,
+                    endIndent: 100,
                     color: Color(0xFFF9B17A),
                   ),
                   const SizedBox(height: 50),
@@ -695,7 +743,7 @@ class LaptopHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           SizedBox(
-                              width: 400,
+                              width: MediaQuery.of(context).size.width / 4.25,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -705,15 +753,35 @@ class LaptopHomePage extends StatelessWidget {
                               ))
                         ],
                       ),
-                      const Column(
+                      Column(
                         children: [
-                          Text(
+                          const Text(
                             'Courses',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
-                          Text(
+                          const Text(
                             'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const SizedBox(height: 10),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/course');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'Courses',
+                              style: TextStyle(fontSize: 20),
+                            ),
                           ),
                         ],
                       ),
@@ -723,31 +791,51 @@ class LaptopHomePage extends StatelessWidget {
                   const Divider(
                     height: 20,
                     thickness: 2,
-                    indent: 20,
-                    endIndent: 20,
+                    indent: 100,
+                    endIndent: 100,
                     color: Color(0xFFF9B17A),
                   ),
                   const SizedBox(height: 50),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      const Column(
+                      Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          Text(
+                          const Text(
                             'Gallery',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
-                          Text(
+                          const Text(
                             'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const SizedBox(height: 10),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/gallery');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.red,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                            ),
+                            icon: const Icon(
+                              Icons.arrow_right,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'Gallery',
+                              style: TextStyle(fontSize: 20),
+                            ),
                           ),
                         ],
                       ),
                       Column(
                         children: [
                           SizedBox(
-                              width: 400,
+                              width: MediaQuery.of(context).size.width / 4.25,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
