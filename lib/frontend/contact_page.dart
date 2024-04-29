@@ -169,7 +169,7 @@ class DesktopContactPage extends StatelessWidget {
                     color: Colors.white),
               ),
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 100),
             SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
@@ -989,6 +989,15 @@ class MobileContactPage extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        const Text(
+                          'Wawa Studio Yoga,',
+                          style: TextStyle(fontSize: 26, color: Colors.white),
+                        ),
+                        const Text(
+                          'Pilates, and Workout',
+                          style: TextStyle(fontSize: 26, color: Colors.white),
+                        ),
+                        const SizedBox(height: 10),
                         const Text(
                           'Phone: +66 63-474-6519',
                           style: TextStyle(fontSize: 20, color: Colors.white),

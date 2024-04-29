@@ -302,7 +302,7 @@ class DesktopHomePage extends StatelessWidget {
                       Column(
                         children: [
                           SizedBox(
-                              width: MediaQuery.of(context).size.width,
+                              width: MediaQuery.of(context).size.width / 4,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -330,7 +330,7 @@ class DesktopHomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
                           SizedBox(
-                              width: MediaQuery.of(context).size.width,
+                              width: MediaQuery.of(context).size.width / 4,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(
@@ -422,7 +422,7 @@ class DesktopHomePage extends StatelessWidget {
                       Column(
                         children: [
                           SizedBox(
-                              width: MediaQuery.of(context).size.width,
+                              width: MediaQuery.of(context).size.width / 4,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: const Image(

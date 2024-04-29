@@ -175,8 +175,8 @@ class DesktopProfilePage extends StatelessWidget {
             Column(
               children: <Widget>[
                 Container(
-                  height: 225,
-                  width: 225,
+                  height: 275,
+                  width: 275,
                   decoration: BoxDecoration(
                       border: Border.all(style: BorderStyle.none),
                       shape: BoxShape.circle,
@@ -197,12 +197,12 @@ class DesktopProfilePage extends StatelessWidget {
                           'Miss Kulwarynt Sitthithananrat',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 30,
+                            fontSize: 35,
                           ),
                           textAlign: TextAlign.center,
                         ),
                         Text(
-                          'Owner of Wawa studio Yoga, Pilates and Workout',
+                          'Owner of Wawa studio Yoga, Pilates, and Workout',
                           style: TextStyle(color: Colors.white, fontSize: 20),
                           textAlign: TextAlign.center,
                         ),
@@ -420,13 +420,13 @@ class LaptopProfilePage extends StatelessWidget {
                           'Miss Kulwarynt Sitthithananrat',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 26,
+                            fontSize: 28,
                           ),
                           textAlign: TextAlign.center,
                         ),
                         Text(
                           'Owner of Wawa studio Yoga, Pilates, and Workout',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                           textAlign: TextAlign.center,
                         ),
                       ],
