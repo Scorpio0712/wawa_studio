@@ -196,8 +196,9 @@ class DesktopCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 35, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
+                            'Yoga is a movement that combines\nbreathing and utilizes various\ntechniques. Meditation is a continuous\nform of consciousness.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -240,8 +241,9 @@ class DesktopCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 35, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
+                            'training that enhances physical strength\nand flexibility.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -284,8 +286,9 @@ class DesktopCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 35, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
+                            'Combining weight training and aerobic\nexercise to enhance physical strength',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -328,8 +331,9 @@ class DesktopCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 35, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
+                            'Skills to teach movement and strength.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -516,8 +520,9 @@ class LaptopCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 35, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
+                            'Yoga is a movement that combines\nbreathing and utilizes various\ntechniques. Meditation is a continuous\nform of consciousness.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -560,8 +565,9 @@ class LaptopCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 35, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
+                            'training that enhances physical strength\nand flexibility.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -604,8 +610,9 @@ class LaptopCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 35, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
+                            'Combining weight training and aerobic\nexercise to enhance physical strength',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -648,8 +655,9 @@ class LaptopCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 35, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
+                            'Skills to teach movement and strength.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -834,11 +842,12 @@ class TabletCoursePage extends StatelessWidget {
                         children: [
                           Text(
                             'Yoga',
-                            style: TextStyle(fontSize: 35, color: Colors.white),
+                            style: TextStyle(fontSize: 30, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            'Yoga is a movement that\ncombines breathing and\nutilizes various techniques.\nMeditation is a continuous\nform of consciousness.',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -878,11 +887,12 @@ class TabletCoursePage extends StatelessWidget {
                         children: [
                           Text(
                             'Pilates',
-                            style: TextStyle(fontSize: 35, color: Colors.white),
+                            style: TextStyle(fontSize: 30, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            'training that enhances\nphysical strength and\nflexibility.',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -922,11 +932,12 @@ class TabletCoursePage extends StatelessWidget {
                         children: [
                           Text(
                             'Workout',
-                            style: TextStyle(fontSize: 35, color: Colors.white),
+                            style: TextStyle(fontSize: 30, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            'Combining weight training\nand aerobic exercise\nto enhance physical strength',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -966,11 +977,12 @@ class TabletCoursePage extends StatelessWidget {
                         children: [
                           Text(
                             'Boxing',
-                            style: TextStyle(fontSize: 35, color: Colors.white),
+                            style: TextStyle(fontSize: 30, color: Colors.white),
                           ),
                           Text(
-                            'Hello',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            'Skills to teach\nmovement and strength.',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -1120,7 +1132,7 @@ class MobileCoursePage extends StatelessWidget {
                 const SizedBox(height: 50),
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 1.5,
+                  height: MediaQuery.of(context).size.height * 1.7,
                   child: Column(
                     children: <Widget>[
                       Column(
@@ -1139,8 +1151,9 @@ class MobileCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 30, color: Colors.white),
                           ),
                           const Text(
-                            'Hello',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            'Yoga is a movement that combines\nbreathing and utilizes various\ntechniques. Meditation is a continuous\nform of consciousness.',
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -1169,8 +1182,9 @@ class MobileCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 30, color: Colors.white),
                           ),
                           const Text(
-                            'Hello',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            'training that enhances\nphysical strength and flexibility.',
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -1199,8 +1213,9 @@ class MobileCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 30, color: Colors.white),
                           ),
                           const Text(
-                            'Hello',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            'Combining weight training and\naerobic exercise to enhance\nphysical strength',
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -1229,8 +1244,9 @@ class MobileCoursePage extends StatelessWidget {
                             style: TextStyle(fontSize: 30, color: Colors.white),
                           ),
                           const Text(
-                            'Hello',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            'Skills to teach movement and strength.',
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       )

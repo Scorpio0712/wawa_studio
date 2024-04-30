@@ -4,8 +4,6 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   firebase_core
-  firebase_storage
-  geolocator_windows
   url_launcher_windows
 )
 

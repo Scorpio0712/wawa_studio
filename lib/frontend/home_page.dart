@@ -274,8 +274,9 @@ class DesktopHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 40, color: Colors.white),
                           ),
                           const Text(
-                            'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
+                            'We believe that exercise makes us physically and\nmentally healthy. We have over 7 years of yoga,\nPilates, weight training.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton.icon(
@@ -347,8 +348,9 @@ class DesktopHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 40, color: Colors.white),
                           ),
                           const Text(
-                            'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
+                            'The fitness studio provides various\npre exercise services, including body assessments,\n fitness advice, yoga, Pilates, boxing,\nand weight training.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton.icon(
@@ -394,8 +396,9 @@ class DesktopHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 40, color: Colors.white),
                           ),
                           const Text(
-                            'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
+                            'The course is very interesting, with Pilates machines,\ncable machines, Pilates machines and other equipment\navailable for inexperienced individuals to start.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton.icon(
@@ -687,8 +690,9 @@ class LaptopHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                           const Text(
-                            'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            'We believe that exercise makes us physically and\nmentally healthy. We have over 7 years of yoga,\nPilates, weight training.',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton.icon(
@@ -760,8 +764,9 @@ class LaptopHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                           const Text(
-                            'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            'The fitness studio provides various\npre exercise services, including body assessments,\n fitness advice, yoga, Pilates, boxing,\nand weight training.',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton.icon(
@@ -807,8 +812,9 @@ class LaptopHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                           const Text(
-                            'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            'The course is very interesting, with Pilates machines,\ncable machines, Pilates machines and other equipment\navailable for inexperienced individuals to start.',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton.icon(
@@ -1105,8 +1111,9 @@ class TabletHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 26, color: Colors.white),
                           ),
                           const Text(
-                            'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
+                            'We believe that exercise makes us physically and\nmentally healthy. We have over 7 years of yoga,\nPilates, weight training.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 20),
                           ElevatedButton.icon(
@@ -1178,8 +1185,9 @@ class TabletHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 26, color: Colors.white),
                           ),
                           const Text(
-                            'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
+                            'The fitness studio provides various\npre exercise services, including body assessments,\n fitness advice, yoga, Pilates, boxing,\nand weight training.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 20),
                           ElevatedButton.icon(
@@ -1225,8 +1233,9 @@ class TabletHomePage extends StatelessWidget {
                             style: TextStyle(fontSize: 26, color: Colors.white),
                           ),
                           const Text(
-                            'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
+                            'The course is very interesting, with Pilates machines,\ncable machines, Pilates machines and other equipment\navailable for inexperienced individuals to start.',
                             style: TextStyle(fontSize: 20, color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 20),
                           ElevatedButton.icon(
@@ -1348,31 +1357,46 @@ class MobileHomePage extends StatelessWidget {
                               onTap: () {
                                 Navigator.pushNamed(context, '/home');
                               },
-                              child: const Text('Home' ,style: TextStyle(color: AppColor.luxuryRed),),
+                              child: const Text(
+                                'Home',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/profile');
                               },
-                              child: const Text('Profile' ,style: TextStyle(color: AppColor.luxuryRed),),
+                              child: const Text(
+                                'Profile',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/course');
                               },
-                              child: const Text('Courses' ,style: TextStyle(color: AppColor.luxuryRed),),
+                              child: const Text(
+                                'Courses',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/gallery');
                               },
-                              child: const Text('Gallery' ,style: TextStyle(color: AppColor.luxuryRed),),
+                              child: const Text(
+                                'Gallery',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                             PopupMenuItem(
                               onTap: () {
                                 Navigator.pushNamed(context, '/contact');
                               },
-                              child: const Text('Contact' ,style: TextStyle(color: AppColor.luxuryRed),),
+                              child: const Text(
+                                'Contact',
+                                style: TextStyle(color: AppColor.luxuryRed),
+                              ),
                             ),
                           ])
                 ],
@@ -1473,7 +1497,7 @@ class MobileHomePage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 150),
+            const SizedBox(height: 50),
             SizedBox(
               height: 1500,
               width: MediaQuery.of(context).size.width,
@@ -1498,8 +1522,9 @@ class MobileHomePage extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                       const Text(
-                        'ประสบการณ์แวดวงครูสอนโยคะมากกว่า 7 ปี',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        'We believe that exercise makes us\nphysically and mentally healthy.\nWe have over 7 years of yoga,\nPilates, weight training.',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 20),
                       TextButton.icon(
@@ -1523,7 +1548,7 @@ class MobileHomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 30),
                   const Divider(
                     height: 20,
                     thickness: 2,
@@ -1531,7 +1556,7 @@ class MobileHomePage extends StatelessWidget {
                     endIndent: 20,
                     color: Color(0xFFF9B17A),
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 30),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -1550,8 +1575,9 @@ class MobileHomePage extends StatelessWidget {
                           )),
                       const SizedBox(height: 20),
                       const Text(
-                        'มีคอร์สออกกำลังกายมากมายให้เลือกเรียน',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        'The fitness studio provides\nvarious pre exercise services,\nincluding body assessments, \nfitness advice, yoga, Pilates, boxing, and\nweight training.',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 20),
                       TextButton.icon(
@@ -1575,7 +1601,7 @@ class MobileHomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 30),
                   const Divider(
                     height: 20,
                     thickness: 2,
@@ -1583,7 +1609,7 @@ class MobileHomePage extends StatelessWidget {
                     endIndent: 20,
                     color: Color(0xFFF9B17A),
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 30),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -1602,8 +1628,9 @@ class MobileHomePage extends StatelessWidget {
                           )),
                       const SizedBox(height: 20),
                       const Text(
-                        'เครื่องออกกำลังกายครอบคลุมทุกส่วน',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        'The course is very interesting, with\nPilates machines, cable machines,\nPilates machines and other\nequipment available for\ninexperienced individuals to start.',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 20),
                       TextButton.icon(
