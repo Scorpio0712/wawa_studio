@@ -1,6 +1,6 @@
 {
-    "name": "web_coperation",
-    "short_name": "web_coperation",
+    "name": "Wawa Studio Yoga, Pilates, and Workout",
+    "short_name": "Wawa Studio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
@@ -10,23 +10,23 @@
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "icons/Icon-192.png",
+            "src": "icons/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-512.png",
+            "src": "icons/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-maskable-192.png",
+            "src": "wawalogo.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "icons/Icon-maskable-512.png",
+            "src": "wawalogo.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"

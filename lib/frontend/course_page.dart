@@ -161,7 +161,7 @@ class DesktopCoursePage extends StatelessWidget {
                 image: DecorationImage(
                     image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
-                    opacity: 0.4),
+                    opacity: 0.3),
               ),
               child: const Text(
                 'C O U R S E S',
@@ -485,7 +485,7 @@ class LaptopCoursePage extends StatelessWidget {
                 image: DecorationImage(
                     image: AssetImage('assets/image/Head_2.JPG'),
                     fit: BoxFit.cover,
-                    opacity: 0.4),
+                    opacity: 0.3),
               ),
               child: const Text(
                 'C O U R S E S',

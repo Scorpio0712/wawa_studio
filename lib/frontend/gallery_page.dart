@@ -159,7 +159,7 @@ class DesktopGalleryPage extends StatelessWidget {
                     image: DecorationImage(
                         image: AssetImage('assets/image/Head_2.JPG'),
                         fit: BoxFit.cover,
-                        opacity: 0.4),
+                        opacity: 0.3),
                   ),
                   child: const Text(
                     'G A L L E R Y',
@@ -540,7 +540,7 @@ class LaptopGalleryPage extends StatelessWidget {
                     image: DecorationImage(
                         image: AssetImage('assets/image/Head_2.JPG'),
                         fit: BoxFit.cover,
-                        opacity: 0.4),
+                        opacity: 0.3),
                   ),
                   child: const Text(
                     'G A L L E R Y',
